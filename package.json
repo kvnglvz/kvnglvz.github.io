@@ -10,7 +10,7 @@
     "serve": "nuxt serve",
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lint": "npm run lint:js",
-    "generate": "nuxt export && nuxt build",
+    "generate": "nuxt build && nuxt export",
     "deploy": "push-dir --dir=dist --branch=master --cleanup"  
   },
   "dependencies": {
