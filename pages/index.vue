@@ -80,25 +80,25 @@ export default {
       projects: [{
         title: 'Watson AI Project',
         subtitle: undefined,
-        media: ['https://picsum.photos/id/237/200/300', 'https://picsum.photos/id/250/200/300', 'https://picsum.photos/id/100/200/300', 'https://picsum.photos/id/99/200/300', 'https://picsum.photos/id/99/200/300'],
+        media: ['https://picsum.photos/id/237/200/300', 'https://picsum.photos/id/250/200/300', 'https://picsum.photos/id/100/200/300', 'https://picsum.photos/id/99/200/300', 'https://picsum.photos/id/33/200/300'],
         description: 'AI Project I made',
         techUsed: ['Vue.js', 'Nuxt.js', 'Node', 'Express.js', 'IBM Watson', 'Vuetify (Material)']
       }, {
         title: 'Node Mapper v2',
         subtitle: 'Instant messaging real time conversation mapper',
-        media: ['https://picsum.photos/id/100/200/300', 'https://picsum.photos/id/99/200/300'],
+        media: ['https://picsum.photos/id/20/200/300'],
         description: 'Replacement for current node mapper',
         techUsed: ['Node', 'Express.js', 'RabbitMQ']
       }, {
         title: 'Yurei Ninja',
         subtitle: 'Instant messaging real time conversation mapper',
-        media: ['https://picsum.photos/id/100/200/300', 'https://picsum.photos/id/99/200/300'],
+        media: ['https://picsum.photos/id/16/200/300', 'https://picsum.photos/id/67/200/300'],
         description: 'Replacement for current node mapper',
         techUsed: ['Node', 'Express.js', 'RabbitMQ']
       }, {
         title: 'What Bread',
         subtitle: 'Instant messaging real time conversation mapper',
-        media: ['https://picsum.photos/id/100/200/300', 'https://picsum.photos/id/99/200/300'],
+        media: ['https://picsum.photos/id/78/200/300', 'https://picsum.photos/id/52/200/300', 'https://picsum.photos/id/25/200/300'],
         description: 'Replacement for current node mapper',
         techUsed: ['Node', 'Express.js', 'RabbitMQ']
       }]
