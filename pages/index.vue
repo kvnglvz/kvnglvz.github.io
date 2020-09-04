@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="d-flex flex-column xs12 md6 sm8">
+  <v-layout column justify-center align-center>
+    <v-flex xs12 md6 sm8>
       <v-card outlined>
         <v-list-item>
           <v-list-item-content>
@@ -31,8 +31,8 @@
           <v-chip small>IBM Watson</v-chip>
         </v-card-text>
       </v-card>
-    </div>
-  </div>
+    </v-flex>
+  </v-layout>
 </template>
 
 <script>
