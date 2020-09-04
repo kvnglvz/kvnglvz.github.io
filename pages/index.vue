@@ -1,7 +1,7 @@
 <template>
   <v-layout column justify-center align-center>
     <v-flex xs12 md6 sm8>
-      <v-card v-for="(item, index) in projects" :key="index" outlined>
+      <v-card v-for="(item, index) in projects" :key="index" outlined class="mb-2">
         <v-list-item>
           <v-list-item-content>
             <v-list-item-title>{{ item.title }}</v-list-item-title>
@@ -9,33 +9,33 @@
           </v-list-item-content>
         </v-list-item>
         <v-divider v-if="item.media.length === 0" />
-        <v-img v-if="item.media.length === 1" :src="item.media[0]" aspect-ratio="1" />
+        <v-img v-if="item.media.length === 1" :src="item.media[0]" aspect-ratio="1" @click="openGallery(index, 0)" />
         <v-row v-if="item.media.length === 2" no-gutters>
           <v-col>
-            <v-img :src="item.media[0]" aspect-ratio="0.5" />
+            <v-img :src="item.media[0]" aspect-ratio="0.5" @click="openGallery(index, 0)" />
           </v-col>
           <v-col>
-            <v-img :src="item.media[1]" aspect-ratio="0.5" />
+            <v-img :src="item.media[1]" aspect-ratio="0.5" @click="openGallery(index, 1)" />
           </v-col>
         </v-row>
         <v-row v-if="item.media.length === 3" no-gutters>
           <v-col>
-            <v-img :src="item.media[0]" aspect-ratio="0.5" />
+            <v-img :src="item.media[0]" aspect-ratio="0.5" @click="openGallery(index, 0)" />
           </v-col>
           <v-col>
-            <v-img :src="item.media[1]" aspect-ratio="1" />
-            <v-img :src="item.media[2]" aspect-ratio="1" />
+            <v-img :src="item.media[1]" aspect-ratio="1" @click="openGallery(index, 1)" />
+            <v-img :src="item.media[2]" aspect-ratio="1" @click="openGallery(index, 2)" />
           </v-col>
         </v-row>
         <v-row v-if="item.media.length >= 4" no-gutters>
           <v-col cols="9">
-            <v-img :src="item.media[0]" aspect-ratio="1" @click="openGallery(index)" />
+            <v-img :src="item.media[0]" aspect-ratio="1" @click="openGallery(index, 0)" />
           </v-col>
           <v-col>
-            <v-img :src="item.media[1]" aspect-ratio="1" />
-            <v-img :src="item.media[2]" aspect-ratio="1" />
-            <v-img v-if="item.media.length === 4" :src="item.media[3]" aspect-ratio="1" />
-            <v-img v-else-if="item.media.length > 4" :src="item.media[3]" aspect-ratio="1">
+            <v-img :src="item.media[1]" aspect-ratio="1" @click="openGallery(index, 1)" />
+            <v-img :src="item.media[2]" aspect-ratio="1" @click="openGallery(index, 2)" />
+            <v-img v-if="item.media.length === 4" :src="item.media[3]" aspect-ratio="1" @click="openGallery(index, 3)" />
+            <v-img v-else-if="item.media.length > 4" :src="item.media[3]" aspect-ratio="1" @click="openGallery(index, 3)">
               <v-overlay absolute>
                 <h1>{{ `+${item.media.length - 4}` }}</h1>
               </v-overlay>
@@ -45,21 +45,26 @@
         <v-card-text v-if="item.description">{{ item.description }}</v-card-text>
         <v-divider />
         <v-card-text class="overline ma-0 pt-0 pb-0">Technology used:</v-card-text>
-        <v-chip-group class="tech-list">
-          <v-chip v-for="(tech, techIndex) in item.techUsed" :key="techIndex" small>{{ tech }}</v-chip>
+        <v-chip-group>
+          <v-chip v-for="(tech, techIndex) in item.techUsed" :key="techIndex" small :class="[techIndex === 0 ? 'ml-4' : undefined]">{{ tech }}</v-chip>
         </v-chip-group>
       </v-card>
-      <v-overlay :value="galleryOverlay">
-        <!-- Gallery -->
-        <v-flex md12>
-          <v-carousel height="500" :hide-delimiters="true">
-            <v-carousel-item v-for="(media, mediaIndex) of selectedGallery" :key="mediaIndex" :src="media" />
-          </v-carousel>
-          <v-btn icon @click="closeGallery()">
+      <v-dialog
+        :value="galleryOverlay"
+        fullscreen
+        content-class="elevation-0"
+        width="100%"
+        @click:outside="closeGallery()"
+      >
+        <v-carousel v-model="galleryIndex" :hide-delimiters="true" height="100%">
+          <v-carousel-item v-for="(media, mediaIndex) of selectedGallery" :key="mediaIndex">
+            <v-img :src="media" contain height="100%" aspect-ratio="1" />
+          </v-carousel-item>
+          <v-btn absolute top right @click="closeGallery()">
             <v-icon>mdi-close</v-icon>
           </v-btn>
-        </v-flex>
-      </v-overlay>
+        </v-carousel>
+      </v-dialog>
     </v-flex>
   </v-layout>
 </template>
@@ -70,27 +75,40 @@ export default {
   data () {
     return {
       galleryOverlay: false,
+      galleryIndex: undefined,
       selectedGallery: undefined,
       projects: [{
-        key: 'watson-ai-project',
         title: 'Watson AI Project',
         subtitle: undefined,
         media: ['https://picsum.photos/id/237/200/300', 'https://picsum.photos/id/250/200/300', 'https://picsum.photos/id/100/200/300', 'https://picsum.photos/id/99/200/300', 'https://picsum.photos/id/99/200/300'],
         description: 'AI Project I made',
         techUsed: ['Vue.js', 'Nuxt.js', 'Node', 'Express.js', 'IBM Watson', 'Vuetify (Material)']
       }, {
-        key: 'node-mapper-v2',
         title: 'Node Mapper v2',
         subtitle: 'Instant messaging real time conversation mapper',
-        media: [],
+        media: ['https://picsum.photos/id/100/200/300', 'https://picsum.photos/id/99/200/300'],
+        description: 'Replacement for current node mapper',
+        techUsed: ['Node', 'Express.js', 'RabbitMQ']
+      }, {
+        title: 'Yurei Ninja',
+        subtitle: 'Instant messaging real time conversation mapper',
+        media: ['https://picsum.photos/id/100/200/300', 'https://picsum.photos/id/99/200/300'],
+        description: 'Replacement for current node mapper',
+        techUsed: ['Node', 'Express.js', 'RabbitMQ']
+      }, {
+        title: 'What Bread',
+        subtitle: 'Instant messaging real time conversation mapper',
+        media: ['https://picsum.photos/id/100/200/300', 'https://picsum.photos/id/99/200/300'],
         description: 'Replacement for current node mapper',
         techUsed: ['Node', 'Express.js', 'RabbitMQ']
       }]
     }
   },
   methods: {
-    openGallery (projectIndex) {
+    openGallery (projectIndex, galleryIndex) {
       this.selectedGallery = this.projects[projectIndex].media
+      this.galleryIndex = galleryIndex
+      console.log(this.galleryIndex)
       this.galleryOverlay = true
     },
     closeGallery () {
@@ -100,9 +118,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-  .tech-list:first-child {
-    padding-left: 100px;
-  }
-</style>
