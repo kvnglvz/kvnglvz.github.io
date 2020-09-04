@@ -1,20 +1,48 @@
 <template>
-  <v-layout column justify-center align-center>
-    <v-flex xs12 sm8 md6>
-      <v-card>
-        <v-card-title class="headline">
-          I don't have anything here yet. Stay tuned though!
-        </v-card-title>
+  <div>
+    <div class="d-flex flex-column xs12 md6 sm8">
+      <v-card outlined>
+        <v-list-item>
+          <v-list-item-content>
+            <v-list-item-title>IBM Watson + Nuxt.js</v-list-item-title>
+            <v-list-item-subtitle>A project for something ... </v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
+        <v-img src="https://cdn.vuetifyjs.com/images/cards/mountain.jpg" height="194" />
+        <v-card-text>Hi there</v-card-text>
         <v-card-text>
-          <p>It feels chilly over here.</p>
+          <v-chip small>Vue.js</v-chip>
+          <v-chip small>Nuxt.js</v-chip>
+          <v-chip small>IBM Watson</v-chip>
         </v-card-text>
       </v-card>
-    </v-flex>
-  </v-layout>
+      <v-card outlined>
+        <v-list-item>
+          <v-list-item-content>
+            <v-list-item-title>IBM Watson + Nuxt.js</v-list-item-title>
+            <!-- <v-list-item-subtitle>A project for something ... </v-list-item-subtitle> -->
+          </v-list-item-content>
+        </v-list-item>
+        <v-img src="https://cdn.vuetifyjs.com/images/cards/mountain.jpg" height="194" />
+        <v-card-text>Hi there</v-card-text>
+        <v-card-text>
+          <v-chip small>Vue.js</v-chip>
+          <v-chip small>Nuxt.js</v-chip>
+          <v-chip small>IBM Watson</v-chip>
+        </v-card-text>
+      </v-card>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
-  components: {}
+  components: {},
+  data () {
+    return {
+      projects: [{
+      }]
+    }
+  }
 }
 </script>

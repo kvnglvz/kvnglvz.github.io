@@ -4,7 +4,7 @@
       <v-toolbar-title v-text="title" />
     </v-app-bar>
     <v-content>
-      <v-container>
+      <v-container fluid>
         <nuxt />
       </v-container>
     </v-content>
@@ -19,7 +19,7 @@ export default {
   data () {
     return {
       fixed: false,
-      title: '@keviscoding'
+      title: 'Kevin Galvez | A developer from the highlands'
     }
   }
 }
