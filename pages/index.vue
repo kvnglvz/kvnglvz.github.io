@@ -1,6 +1,21 @@
 <template>
   <v-layout column justify-center align-center>
     <v-flex xs12 md6 sm8>
+      <v-card class="mb-2" outlined width="530">
+        <v-img src="/bg.jpg" class="align-end" contain>
+          <v-avatar size="128" class="ml-4 profile">
+            <v-img src="/profpic.jpg" />
+          </v-avatar>
+          <v-card-title>
+            <h1>Hey there! I'm Kevin</h1>
+          </v-card-title>
+        </v-img>
+        <v-card-text>
+          I'm a programmer hailing from the city of pines located in the highlands of the Cordilleras. I make web and mobile experiences.
+        </v-card-text>
+      </v-card>
+      <h3 class="ml-4">Works</h3>
+      <v-divider class="mb-2" />
       <v-card v-for="(item, index) in projects" :key="index" outlined class="mb-2">
         <v-list-item>
           <v-list-item-content>
@@ -51,14 +66,22 @@
       </v-card>
       <v-dialog
         :value="galleryOverlay"
-        fullscreen
         content-class="elevation-0"
-        width="100%"
         @click:outside="closeGallery()"
       >
-        <v-carousel v-model="galleryIndex" :hide-delimiters="true" height="100%">
+        <v-carousel v-model="galleryIndex" :hide-delimiters="true" :show-arrows="selectedGallery && selectedGallery.length > 1">
           <v-carousel-item v-for="(media, mediaIndex) of selectedGallery" :key="mediaIndex">
-            <v-img :src="media" contain height="100%" aspect-ratio="1" />
+            <v-img :src="media" height="100%" contain>
+              <template v-slot:placeholder>
+                <v-row
+                  class="fill-height ma-0"
+                  align="center"
+                  justify="center"
+                >
+                  <v-progress-circular indeterminate color="grey lighten-5" />
+                </v-row>
+              </template>
+            </v-img>
           </v-carousel-item>
           <v-btn absolute top right @click="closeGallery()">
             <v-icon>mdi-close</v-icon>
@@ -80,7 +103,7 @@ export default {
       projects: [{
         title: 'Watson AI Project',
         subtitle: undefined,
-        media: ['https://picsum.photos/id/237/200/300', 'https://picsum.photos/id/250/200/300', 'https://picsum.photos/id/100/200/300', 'https://picsum.photos/id/99/200/300', 'https://picsum.photos/id/33/200/300'],
+        media: ['https://picsum.photos/id/237/200/300', 'https://picsum.photos/id/250/200/300', 'https://picsum.photos/id/100/200/300', 'https://picsum.photos/id/99/1024/768', 'https://picsum.photos/id/33/200/300'],
         description: 'AI Project I made',
         techUsed: ['Vue.js', 'Nuxt.js', 'Node', 'Express.js', 'IBM Watson', 'Vuetify (Material)']
       }, {
@@ -108,7 +131,6 @@ export default {
     openGallery (projectIndex, galleryIndex) {
       this.selectedGallery = this.projects[projectIndex].media
       this.galleryIndex = galleryIndex
-      console.log(this.galleryIndex)
       this.galleryOverlay = true
     },
     closeGallery () {
