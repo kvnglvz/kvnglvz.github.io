@@ -1,21 +1,34 @@
+/* eslint-disable no-undef */
 module.exports = {
-  root: true,
-  env: {
-    browser: true,
-    node: true
+  'env': {
+    'browser': true,
+    'es2021': true
   },
-  parserOptions: {
-    parser: 'babel-eslint'
+  'extends': [
+    'eslint:recommended',
+    'plugin:vue/essential'
+  ],
+  'parserOptions': {
+    'ecmaVersion': 12,
+    'sourceType': 'module'
   },
-  extends: [
-    '@nuxtjs',
-    'plugin:nuxt/recommended'
+  'plugins': [
+    'vue'
   ],
-  plugins: [
-  ],
-  // add your custom rules here
-  rules: {
-    'vue/singleline-html-element-content-newline': 0,
-    'object-shorthand': 0
+  'rules': {
+    'indent': [
+      'error',
+      2
+    ],
+    'linebreak-style': 0,
+    'quotes': [
+      'error',
+      'single'
+    ],
+    'semi': [
+      'error',
+      'always'
+    ],
+    'vue/experimental-script-setup-vars': 0
   }
-}
+};
