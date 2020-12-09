@@ -9,7 +9,7 @@
 <script>
 export default {
   created () {
-    document.querySelector('html').style.backgroundColor = this.$vuetify.theme.backgroundColor;
+    document.querySelector('body').style.backgroundColor = this.$vuetify.theme.backgroundColor;
   }
 };
 </script>
