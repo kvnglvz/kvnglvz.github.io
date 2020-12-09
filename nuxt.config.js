@@ -70,7 +70,7 @@ export default {
       themes: {
         dark: {
           backgroundColor: '#121212',
-          primary: colors.blue.darken2,
+          primary: colors.teal.lighten1,
           accent: colors.grey.darken3,
           secondary: colors.amber.darken3,
           info: colors.teal.lighten1,
@@ -87,4 +87,4 @@ export default {
   */
   build: {
   }
-}
+};

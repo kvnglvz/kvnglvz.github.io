@@ -2,47 +2,82 @@
   <v-container>
     <v-row no-gutters justify="center">
       <v-col xs="12" sm="6" md="4">
-        <v-col>
-          <v-avatar size="128" class="ml-1 profile">
-            <v-img src="/profpic.jpg" />
-          </v-avatar>
-          <h1>Kevin Galvez</h1>
-          <p>Hi! I'm Kevin. I'm a programmer. I mostly work on mobile applications. I work in Baguio city. In my spare time, I practice the piano and cook pasta.</p>
-        </v-col>
+        <v-row>
+          <v-col>
+            <v-avatar size="128" class="ml-1 profile">
+              <v-img src="/profpic.jpg" />
+            </v-avatar>
+            <h1>Kevin Galvez</h1>
+            <p>Hi! I'm Kevin. I'm a programmer. I mostly work on mobile applications. I work in Baguio city. In my spare time, I practice the piano and cook pasta.</p>
+          </v-col>
+        </v-row>
 
-        <v-card>
-          <v-card-text>
-            Once upon a time ...
-            <br/>
-            This had content ...
-            <br/>
-            ...
-            <br/>
-            But now it's gone!
-            <br/>
-            Kidding!
-            <br/>
-            I'm still fixing some stuff here and there.
-            <br/>
-            Do visit next time!
-            <br/>
-            Thank You!
-          </v-card-text>
-        </v-card>
-      </v-col>
+        <v-row>
+          <v-col>
+            <h3>Projects</h3>
+            <v-col class="ml-3">
+              <v-row no-gutters class="mb-4">
+                <span><a href="" target="_blank">Chat Application</a> (Mobile App | iOS | Android) @ NMS PH PTY LTD, 2018</span>
+                <span>Primary responsibility: Chat functionality, User Interface, Push Notification, App Management</span>  
+              </v-row>
+              <v-row no-gutters class="mb-4">
+                <span><a href="" target="_blank">Dodgy Skies</a> (Mobile Game | iOS | Android) @ Animal Cracker Games, 2015</span>
+                <span>Primary responsibility: Gameplay mechanics, User Interface, Ads, Monetization, App presence API, App Management</span>  
+              </v-row>
+              <v-row no-gutters class="mb-4">
+                <span><a href="" target="_blank">What Bread!</a> (Mobile Game | iOS | Android) @ Animal Cracker Games, 2015</span>
+                <span>Primary responsibility: User Interface, Ads, Monetization, App presence API, App Management</span>  
+              </v-row>
+              <v-row no-gutters class="mb-4">
+                <span><a href="" target="_blank">Yurei Ninja</a> (Mobile Game | iOS | Android) @ Animal Cracker Games, 2015</span>
+                <span>Primary responsibility: User Interface, Ads, Monetization, App presence API, App Management</span>  
+              </v-row>
+              <button>Load More</button>
+            </v-col>
+
+            <h3>Social</h3>
+            <v-col class="ml-3">
+              <v-row no-gutters><a href="https://twitter.com/kvnglvz" target="_blank">Twitter</a></v-row>
+              <v-row no-gutters><a href="https://linkedin.com/in/kvnglvz/" target="_blank">LinkedIn</a></v-row>
+              <v-row no-gutters><a href="https://github.com/kvnglvz/" target="_blank">Github</a></v-row>
+              <v-row no-gutters><a href="mailto:kevingalvez.pro@gmail.com">kevingalvez.pro@gmail.com</a></v-row>
+            </v-col>
+
+            <h3>Public speaking</h3>
+            <v-col class="ml-3">
+              <v-row no-gutters><span>Ren'py Visual Novel @ University of the Cordilleras, 2015</span></v-row>
+              <v-row no-gutters><span>Unity3D (Women Techmakers) @ University of the Cordilleras, 2015</span></v-row>
+            </v-col>
+
+            <h3>Interests</h3>
+            <v-col class="ml-3">
+              <v-row no-gutters><span>Music</span></v-row>
+              <v-row no-gutters><span>Minimalism</span></v-row>
+              <v-row no-gutters><span>Furniture</span></v-row>
+            </v-col>
+
+            <h3 class="mb-3">About this page</h3>
+            <p>This page was created with Vue, Nuxt and Vuetify.</p>
+            <p>Heavily inspired by <a href="https://filiph.net/" target="_blank">Filip Hráček's</a> Portfolio. I like the simplicity of the design (also I'm not a design person 😛)</p>
+          </v-col>
+        </v-row>
+
+        <v-row>
+          <v-col>
+          </v-col>
+        </v-row>
+
+        <v-row>
+          <v-col>
+            <v-card>
+            </v-card>
+          </v-col>
+        </v-row>
+        </v-col>
     </v-row>
     <!-- <v-layout column justify-center align-center>
       <v-flex xs12 sm4 md4>
         <v-card class="mb-2">
-          
-          
-          
-          
-          
-          
-          
-          
-          
         </v-card>
         <h3 class="ml-4">Works</h3>
         <v-divider class="mb-2" />
