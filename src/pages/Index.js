@@ -92,7 +92,7 @@ const Index = () => {
       <Box p={1} display='flex' flexDirection='column'>
         <List dense disablePadding>
           {
-            map(publicSpeaking, ({ label, description, resources, date }) => (
+            map(publicSpeaking, ({ label, description, resources, resources_label, date }) => (
               <ListItem>
                 <ListItemText
                   primary={`${label} - ${date}`}
@@ -100,7 +100,7 @@ const Index = () => {
                   primaryTypographyProps={{ variant: 'body1' }}
                 />
                 {/* <Typography variant='caption'>{date}</Typography> */}
-                { resources && <Link href={resources} rel='noreferrer' target='_blank'>Resource</Link>}
+                { resources && <Link href={resources} rel='noreferrer' target='_blank'>{resources_label}</Link>}
               </ListItem>
             ))
           }
@@ -114,14 +114,14 @@ const Index = () => {
       <Box p={1} display='flex' flexDirection='column'>
         <List dense disablePadding>
           {
-            map(interests, ({ label, description, resources }) => (
+            map(interests, ({ label, description, resources, resources_label }) => (
               <ListItem>
                 <ListItemText
                   primary={label}
                   secondary={description}
                   primaryTypographyProps={{ variant: 'body1' }}
                 />
-                { resources && <Link href={resources} rel='noreferrer' target='_blank'>View</Link>}
+                { resources && <Link href={resources} rel='noreferrer' target='_blank'>{ resources_label }</Link>}
               </ListItem>
             ))
           }
