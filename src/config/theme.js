@@ -2,8 +2,28 @@ import { colors } from "@material-ui/core";
 import { createMuiTheme } from "@material-ui/core/styles";
 
 const light = createMuiTheme({
+  overrides: {
+    MuiPaper: {
+      rounded: {
+        borderRadius: 8
+      }
+    },
+    MuiListItem: {
+      dense: {
+        paddingTop: 0,
+        paddingBottom: 0
+      },
+      root: {
+        marginTop: 0,
+        marginBottom: 0
+      }
+    }
+  },
   palette: {
-    type: 'light'
+    type: 'light',
+    primary: {
+      main: colors.blue[700]
+    }
   },
   typography: {
     fontSize: 14,
@@ -35,6 +55,12 @@ const light = createMuiTheme({
     h6: {
       fontFamily: "'IBM Plex Sans', 'Arial', sans-serif",
       fontWeight: 600
+    },
+    body2: {
+      fontFamily: "'IBM Plex Sans', 'Arial', sans-serif",
+    },
+    caption: {
+      fontFamily: "'IBM Plex Sans', 'Arial', sans-serif",
     }
   },
   shadows: Array(25).fill('none')

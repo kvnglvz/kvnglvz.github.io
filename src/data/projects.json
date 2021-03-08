@@ -1,3 +1,55 @@
 [{
-  
+  "label": "RedMonTool",
+  "description": "Own implementation of a Redis Monitoring tool",
+  "platform": "Web",
+  "tech": "React, Node.js, Redis",
+  "responsibility": "Frontend, Backend",
+  "group": "NMS PH PTY LTD",
+  "date": "2020",
+  "link": ""
+}, {
+  "label": "BSP PDF Scraper and ForEx",
+  "description": "",
+  "platform": "Web",
+  "tech": "React, Node.js, A little bit of Python, Redis",
+  "responsibility": "Frontend, Backend",
+  "group": "NMS PH PTY LTD",
+  "date": "2020",
+  "link": ""
+}, {
+  "label": "Undisclosed Chat App",
+  "description": "",
+  "platform": "iOS, Android",
+  "tech": "React Native, Realm DB, Socket.io",
+  "responsibility": "Chat functionality, User Interface, Push Notification, App Management",
+  "group": "NMS PH PTY LTD",
+  "date": "2018",
+  "link": ""
+}, {
+  "label": "Dodgy Skies",
+  "description": "",
+  "platform": "iOS, Android",
+  "tech": "Unity3D, C#",
+  "responsibility": "Gameplay mechanics, User Interface, Ads, Monetization, App presence API, App Management",
+  "group": "Animal Cracker Games",
+  "date": "2015",
+  "link": ""
+}, {
+  "label": "What Bread!",
+  "description": "",
+  "platform": "iOS, Android",
+  "tech": "Unity3D, C#",
+  "responsibility": "User Interface, Ads, Monetization, App presence API, App Management",
+  "group": "Animal Cracker Games",
+  "date": "2015",
+  "link": ""
+}, {
+  "label": "Yurei Ninja",
+  "description": "",
+  "platform": "iOS, Android",
+  "tech": "Unity3D, C#",
+  "responsibility": "User Interface, Ads, Monetization, App presence API, App Management",
+  "group": "Animal Cracker Games",
+  "date": "2015",
+  "link": ""
 }]
