@@ -1,23 +1,59 @@
 [{
-  "label": "RedMonTool",
-  "description": "Own implementation of a Redis Monitoring tool",
+  "label": "Moderation platform",
+  "description": "Redis Monitoring Tool",
   "platform": "Web",
   "tech": "React, Node.js, Redis",
-  "responsibility": "Frontend, Backend",
+  "responsibility": "Frontend",
+  "group": "NMS PH PTY LTD",
+  "date": "2021",
+  "link": ""
+}, {
+  "label": "Account management platform",
+  "description": "Redis Monitoring Tool",
+  "platform": "Web",
+  "tech": "React",
+  "responsibility": "Frontend",
   "group": "NMS PH PTY LTD",
   "date": "2020",
   "link": ""
 }, {
-  "label": "BSP PDF Scraper and ForEx",
+  "label": "Finance Dashboard",
   "description": "",
   "platform": "Web",
-  "tech": "React, Node.js, A little bit of Python, Redis",
+  "tech": "React, Node.js, MongoDB",
+  "responsibility": "Fullstack",
+  "group": "NMS PH PTY LTD",
+  "date": "2021",
+  "link": ""
+}, {
+  "label": "Foreign Exchange PDF Scraper",
+  "description": "",
+  "platform": "Web",
+  "tech": "Node.js",
   "responsibility": "Frontend, Backend",
   "group": "NMS PH PTY LTD",
   "date": "2020",
   "link": ""
 }, {
-  "label": "Undisclosed Chat App",
+  "label": "GEO Code API",
+  "description": "",
+  "platform": "Web",
+  "tech": "Node.js",
+  "responsibility": "Backend",
+  "group": "NMS PH PTY LTD",
+  "date": "2020",
+  "link": ""
+}, {
+  "label": "Redis monitoring tool",
+  "description": "Redis Monitoring Tool",
+  "platform": "Web",
+  "tech": "React, Node.js, Redis",
+  "responsibility": "Fullstack",
+  "group": "NMS PH PTY LTD",
+  "date": "2020",
+  "link": ""
+}, {
+  "label": "Chat Application",
   "description": "",
   "platform": "iOS, Android",
   "tech": "React Native, Realm DB, Socket.io",
