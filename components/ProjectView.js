@@ -61,6 +61,16 @@ const ProjectView = (props) => {
     }
   }, [onClose, project]);
 
+  {/* <Image
+        alt={`project-image-${imageIdx}`}
+        src={image}
+        width='500vw'
+        height={isSmDown ? '700vh' : '500vh'}
+        objectFit='contain'
+        objectPosition='50% 50%'
+        quality={100}
+      /> */}
+
   return (
     <Box className={classes.root}>
       <Grid container>
@@ -78,14 +88,16 @@ const ProjectView = (props) => {
                       <Box key={`image-${imageIdx}`} display='flex' justifyContent='center'>
                         {
                           Math.abs(activeStep - imageIdx) <= 2 ? (
-                            <Image
+                            // eslint-disable-next-line @next/next/no-img-element
+                            <img
                               alt={`project-image-${imageIdx}`}
-                              src={image}
-                              width='500vw'
-                              height={isSmDown ? '700vh' : '500vh'}
-                              objectFit='contain'
-                              objectPosition='50% 50%'
-                              quality={100}
+                              src={require(image)}
+                              style={{
+                                width: '500vw',
+                                height: isSmDown ? '700vh': '500vh',
+                                objectFit: 'contain',
+                                objectPosition:'50% 50%'
+                              }}
                             />
                           ) : null
                         }

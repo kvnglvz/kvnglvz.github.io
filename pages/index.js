@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { Box, IconButton, Button, Link, List, ListItem, ListItemText, Typography, Grid, Dialog, DialogContent } from '@material-ui/core';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import React, { useEffect, useState } from 'react';
@@ -81,7 +82,7 @@ const Index = () => {
           </Box>
         </Grid>
         <Grid item sm={4} xs={12}>
-          <Image
+          {/* <Image
             alt='kevin&apos;s picture'
             src='/images/profpic3.jpg'
             width={isSmDown ? '200vw' : '300vw'}
@@ -89,6 +90,16 @@ const Index = () => {
             objectFit='contain'
             objectPosition='50% 50%'
             quality={100}
+          /> */}
+          <img
+            alt='kevin&apos;s picture'
+            src={require('/images/profpic3.jpg')}
+            style={{
+              width: isSmDown ? '200vw' : '300vw',
+              height: isSmDown ? '200vh' : '300vh',
+              objectFit: 'contain',
+              objectPosition: '50% 50%'
+            }}
           />
         </Grid>
       </Grid>
