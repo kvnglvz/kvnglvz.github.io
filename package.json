@@ -15,9 +15,10 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "generate": "next build && next start",
+    "postbuild": "cp -a out/. ../build",
     "lint": "next lint"
   },
   "devDependencies": {
