@@ -2,7 +2,7 @@ import React, { Fragment, useEffect, useState } from 'react';
 import { Grid, Box, Fab, useMediaQuery, Typography, MobileStepper, Button, Divider } from '@material-ui/core';
 import { makeStyles, useTheme } from '@material-ui/styles';
 import { KeyboardArrowLeft,  KeyboardArrowRight, Brightness7 as Brightness7Icon, Brightness4 as Brightness4Icon, Close as CloseIcon } from '@material-ui/icons'
-import Image from 'next/image';
+// import Image from 'next/image';
 import useWindowSize from '../hooks/useWindowSize'
 import SwipeableViews from 'react-swipeable-views';
 import { find, isArray } from 'lodash';

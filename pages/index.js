@@ -14,7 +14,7 @@ import BoxHeader from '../components/BoxHeader';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Head from 'next/head'
 import { AppStoreSubscriber } from '../stores/appStore';
-import Image from 'next/image';
+// import Image from 'next/image';
 import ProjectView from '../components/ProjectView';
 import { useRouter } from 'next/router'
 
