@@ -1,19 +1,19 @@
 [{
-  "label": "Game Dev with Ren'Py",
-  "description": "Women Techmakers",
-  "resources": "https://www.google.com",
-  "resources_label": "Outline",
-  "date": "Dec 2017"
-}, {
-  "label": "Game Dev with Unity3D",
-  "description": "Women Techmakers",
+  "label": "'How to make money with AdMob'",
+  "description": "Ads ads ads @ University of the Cordilleras",
+  "resources": "https://drive.google.com/file/d/0B25GFft73_5bdUo4Z0FjVkpPOVk/view?usp=sharing&resourcekey=0-yIJH2I_amHs-sNnxWE1p9A",
+  "resources_label": "Presentation",
+  "date": "Mar 2017"
+},{
+  "label": "Ren'Py Visual Novel workshop",
+  "description": "We made story games @ University of the Cordilleras",
   "resources": null,
   "resources_label": null,
-  "date": "Dec 2017"
+  "date": "2015"
 }, {
-  "label": "How to make money with AdMob",
-  "description": "Google Talk",
+  "label": "Unity3D workshop",
+  "description": "GameObject and Cubes @ University of the Cordilleras",
   "resources": null,
   "resources_label": null,
-  "date": "Dec 2017"
+  "date": "2015"
 }]

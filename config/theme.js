@@ -82,13 +82,21 @@ const dark = createMuiTheme({
         marginTop: 0,
         marginBottom: 0
       }
+    },
+    MuiDialogContent: {
+      root: {
+        '&:first-child' : {
+          paddingTop: 0
+        },
+        padding: 0,
+      },
     }
   },
   palette: {
     type: 'dark',
     background: {
       default: colors.grey[900],
-      paper: colors.grey[800]
+      paper: colors.grey[900]
     },
     primary: {
       main: colors.cyan[300]

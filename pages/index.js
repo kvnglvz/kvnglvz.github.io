@@ -1,6 +1,6 @@
-import { Box, IconButton, Link, List, ListItem, ListItemText, Typography, Grid, Dialog } from '@material-ui/core';
+import { Box, IconButton, Button, Link, List, ListItem, ListItemText, Typography, Grid, Dialog, DialogContent } from '@material-ui/core';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Base from '../layout/Base';
 import { map } from 'lodash';
 import ListItemLink from '../components/ListItemLink';
@@ -14,27 +14,42 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Head from 'next/head'
 import { AppStoreSubscriber } from '../stores/appStore';
 import Image from 'next/image';
+import ProjectView from '../components/ProjectView';
+import { useRouter } from 'next/router'
 
 const useStyles = makeStyles((theme) => ({
-  profPic: {
-    backgroundImage: `url("/images/profpic3.jpg")`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center center',
-  },
   linkPadding: {
     paddingLeft: theme.spacing(2)
-  }
+  },
 }));
 
 const Index = () => {
   const [open, setOpen] = useState(false);
   const baseTheme = useTheme();
-  const dialogFullScreen = useMediaQuery(baseTheme.breakpoints.down('sm'));
+  const isSmDown = useMediaQuery(baseTheme.breakpoints.down('sm'));
+  const isXs = useMediaQuery(baseTheme.breakpoints.only('xs'));
+
+  const router = useRouter();
 
   const classes = useStyles();
   
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const handleCloseDialog = () => {
+    router.push('/', undefined, { shallow: true });
+  };
+
+  const handleOnClickProject = (slug) => {
+    router.push(`/?project=${slug}`, undefined, { shallow: true });
+  }
+
+  useEffect(() => {
+    if (router.query.project) {
+      // show the modal
+      console.log('yeah yeah baby');
+      setOpen(true);
+    } else {
+      setOpen(false);
+    }
+  }, [router.query.project]);
 
   return (
     <Base>
@@ -47,32 +62,47 @@ const Index = () => {
         <meta name='description' content='Kevin Galvez&apos; portfolio || Application developer from 2600 Philippines' />
       </Head>
 
-      <Box display='flex' flexDirection='row'>
-        <Box p={1} minHeight={200}>
-          <Typography variant='h4'>
-            Kevin Galvez
+      <Grid container justify='center' alignItems='center' spacing={2} direction={isXs ? 'column-reverse' : 'row'}>
+        <Grid item sm={8} xs={12}>
+          <Box display='block' p={1} mb={6}>
+            <Typography variant='h4'>
+              Kevin Galvez
+            </Typography>
+            <Typography paragraph variant='body1'>
+              Hi! I&apos;m Kevin. I&apos;m a programmer. I mostly work on web and mobile apps. I work in Baguio City. In my spare time, I try to play the piano and cook pasta.
+            </Typography>
             <AppStoreSubscriber>
               {({ theme }, { toggleTheme }) => (
-                <IconButton size='small' onClick={toggleTheme}>
+                <IconButton size='small' onClick={toggleTheme} >
                   { theme === 'light' ? <Brightness4Icon/> : <Brightness7Icon /> }
                 </IconButton>
               )}
             </AppStoreSubscriber>
-          </Typography>
-          <Typography variant='body2'>
-            Hi! I&apos;m Kevin. I&apos;m a programmer. I mostly work on web and mobile apps. I work in Baguio City. In my spare time, I try to play the piano and cook pasta.
-          </Typography>
-        </Box>
-        <Box display='block' minWidth={160} className={classes.profPic} ml={2} mb={2} />
-      </Box>
+          </Box>
+        </Grid>
+        <Grid item sm={4} xs={12}>
+          <Image
+            alt='kevin&apos;s picture'
+            src='/images/profpic3.jpg'
+            width={isSmDown ? '200vw' : '300vw'}
+            height={isSmDown ? '200vh' : '300vh'}
+            objectFit='contain'
+            objectPosition='50% 50%'
+            quality={100}
+          />
+        </Grid>
+      </Grid>
       <BoxHeader label='Projects' />
       <Box p={1} display='flex' flexDirection='column'>
         <List dense disablePadding>
           {
             map(projects, (project, projectIdx) => {
-              const { label, description, platform, tech, responsibility, group, date, link } = project;
+              const { slug, label, link } = project;
+              // primary, secondary, body, gallery
               return (
-                <ListItemLink key={projectIdx} onClick={handleOpen}>
+                <ListItemLink key={projectIdx} onClick={() => (
+                  handleOnClickProject(slug)
+                )}>
                   <ListItemText
                     primary={label}
                     primaryTypographyProps={{ color: 'primary', variant: 'body1' }}
@@ -88,8 +118,8 @@ const Index = () => {
       <Box p={1} display='flex' flexDirection='column'>
         <List dense disablePadding>
           {
-            map(socials, ({ label, link }) => (
-              <ListItemLink href={link} rel='noreferrer' target='_blank'>
+            map(socials, ({ label, link }, socialIdx) => (
+              <ListItemLink key={`socials-${socialIdx}`} href={link} rel='noreferrer' target='_blank'>
                 <ListItemText primary={label} primaryTypographyProps={{ variant: 'body1', color: 'primary' }} />
               </ListItemLink>
             ))
@@ -100,8 +130,8 @@ const Index = () => {
       <Box p={1} display='flex' flexDirection='column'>
         <List dense disablePadding>
           {
-            map(publicSpeaking, ({ label, description, resources, resources_label, date }) => (
-              <ListItem>
+            map(publicSpeaking, ({ label, description, resources, resources_label, date }, publicSpeakingIdx) => (
+              <ListItem key={`publicSpeaking-${publicSpeakingIdx}`}>
                 <ListItemText
                   primary={`${label} - ${date}`}
                   secondary={description}
@@ -118,13 +148,12 @@ const Index = () => {
       <Box p={1} display='flex' flexDirection='column'>
         <List dense disablePadding>
           {
-            map(interests, ({ label, description, resources, resources_label }) => (
-              <ListItem>
+            map(interests, ({ label, description, resources, resources_label }, interestsIdx) => (
+              <ListItem key={`interests-${interestsIdx}`}>
                 <ListItemText
                   primary={label}
                   secondary={description}
                   primaryTypographyProps={{ variant: 'body1' }}
-                  secondaryTypographyProps={{ noWrap: true }}
                 />
                 { resources && <Link className={classes.linkPadding} href={resources} rel='noreferrer' target='_blank'>{ resources_label }</Link>}
               </ListItem>
@@ -144,29 +173,16 @@ const Index = () => {
           <ListItem>
             <ListItemText disableTypography>
               <Typography variant='body1'>
-                Inspired by <Link href='/' rel='noreferrer' target='_blank'>Filip Hráček&apos;s</Link> Portfolio. I like the simplicity of his folio and I&apos;m not much of a design person 😛
+                Inspired by <Link href='https://filiph.net/' rel='noreferrer' target='_blank'>Filip Hráček&apos;s</Link> Portfolio. I like the simplicity of his folio and I&apos;m not much of a design person 😛
               </Typography>
             </ListItemText>
           </ListItem>
         </List>
       </Box>
-      <Dialog open={open} fullScreen={dialogFullScreen}>
-        <Grid container>
-          <Grid item xs={9}>
-            <Box width='100%' height='100%'>
-              <Image 
-                src='/images/sample.jpg'
-                alt='Test Image'
-                layout='responsive'
-              />
-            </Box>
-          </Grid>
-          <Grid item xs={3}>
-            <IconButton size='small' onClick={handleClose}>
-              <CloseIcon />
-            </IconButton>
-          </Grid>
-        </Grid>
+      <Dialog onClose={handleCloseDialog} maxWidth='md' fullWidth open={open} fullScreen={isSmDown}>
+        <DialogContent>
+          <ProjectView onClose={handleCloseDialog} />
+        </DialogContent>
       </Dialog>
     </Base>
   );

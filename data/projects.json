@@ -1,4 +1,5 @@
 [{
+  "slug": "moderation",
   "label": "Moderation platform",
   "description": "Redis Monitoring Tool",
   "platform": "Web",
@@ -6,8 +7,14 @@
   "responsibility": "Frontend",
   "group": "NMS PH PTY LTD",
   "date": "2021",
-  "link": ""
+  "link": "",
+  "gallery": [
+    "/images/profpic1.jpg",
+    "/images/profpic2.jpg",
+    "/images/profpic3.jpg"
+  ]
 }, {
+  "slug": "accounts-platform",
   "label": "Account management platform",
   "description": "Redis Monitoring Tool",
   "platform": "Web",
@@ -15,8 +22,14 @@
   "responsibility": "Frontend",
   "group": "NMS PH PTY LTD",
   "date": "2020",
-  "link": ""
+  "link": "",
+  "gallery": [
+    "/images/profpic1.jpg",
+    "/images/profpic2.jpg",
+    "/images/profpic3.jpg"
+  ]
 }, {
+  "slug": "finance-dashboard",
   "label": "Finance Dashboard",
   "description": "",
   "platform": "Web",
@@ -24,8 +37,14 @@
   "responsibility": "Fullstack",
   "group": "NMS PH PTY LTD",
   "date": "2021",
-  "link": ""
+  "link": "",
+  "gallery": [
+    "/images/profpic1.jpg",
+    "/images/profpic2.jpg",
+    "/images/profpic3.jpg"
+  ]
 }, {
+  "slug": "forex-scraper",
   "label": "Foreign Exchange PDF Scraper",
   "description": "",
   "platform": "Web",
@@ -33,8 +52,14 @@
   "responsibility": "Frontend, Backend",
   "group": "NMS PH PTY LTD",
   "date": "2020",
-  "link": ""
+  "link": "",
+  "gallery": [
+    "/images/profpic1.jpg",
+    "/images/profpic2.jpg",
+    "/images/profpic3.jpg"
+  ]
 }, {
+  "slug": "geo-code",
   "label": "GEO Code API",
   "description": "",
   "platform": "Web",
@@ -42,8 +67,14 @@
   "responsibility": "Backend",
   "group": "NMS PH PTY LTD",
   "date": "2020",
-  "link": ""
+  "link": "",
+  "gallery": [
+    "/images/profpic1.jpg",
+    "/images/profpic2.jpg",
+    "/images/profpic3.jpg"
+  ]
 }, {
+  "slug": "redmontool",
   "label": "Redis monitoring tool",
   "description": "Redis Monitoring Tool",
   "platform": "Web",
@@ -51,8 +82,14 @@
   "responsibility": "Fullstack",
   "group": "NMS PH PTY LTD",
   "date": "2020",
-  "link": ""
+  "link": "",
+  "gallery": [
+    "/images/profpic1.jpg",
+    "/images/profpic2.jpg",
+    "/images/profpic3.jpg"
+  ]
 }, {
+  "slug": "mobile-chat-app",
   "label": "Chat Application",
   "description": "",
   "platform": "iOS, Android",
@@ -60,8 +97,14 @@
   "responsibility": "Chat functionality, User Interface, Push Notification, App Management",
   "group": "NMS PH PTY LTD",
   "date": "2018",
-  "link": ""
+  "link": "",
+  "gallery": [
+    "/images/profpic1.jpg",
+    "/images/profpic2.jpg",
+    "/images/profpic3.jpg"
+  ]
 }, {
+  "slug": "dodgy-skies",
   "label": "Dodgy Skies",
   "description": "",
   "platform": "iOS, Android",
@@ -69,8 +112,14 @@
   "responsibility": "Gameplay mechanics, User Interface, Ads, Monetization, App presence API, App Management",
   "group": "Animal Cracker Games",
   "date": "2015",
-  "link": ""
+  "link": "",
+  "gallery": [
+    "/images/profpic1.jpg",
+    "/images/profpic2.jpg",
+    "/images/profpic3.jpg"
+  ]
 }, {
+  "slug": "what-bread",
   "label": "What Bread!",
   "description": "",
   "platform": "iOS, Android",
@@ -78,8 +127,14 @@
   "responsibility": "User Interface, Ads, Monetization, App presence API, App Management",
   "group": "Animal Cracker Games",
   "date": "2015",
-  "link": ""
+  "link": "",
+  "gallery": [
+    "/images/profpic1.jpg",
+    "/images/profpic2.jpg",
+    "/images/profpic3.jpg"
+  ]
 }, {
+  "slug": "yurei-ninja",
   "label": "Yurei Ninja",
   "description": "",
   "platform": "iOS, Android",
@@ -87,5 +142,10 @@
   "responsibility": "User Interface, Ads, Monetization, App presence API, App Management",
   "group": "Animal Cracker Games",
   "date": "2015",
-  "link": ""
+  "link": "",
+  "gallery": [
+    "/images/profpic1.jpg",
+    "/images/profpic2.jpg",
+    "/images/profpic3.jpg"
+  ]
 }]
