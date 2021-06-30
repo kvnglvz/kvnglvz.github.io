@@ -91,16 +91,18 @@ const Index = () => {
             objectPosition='50% 50%'
             quality={100}
           /> */}
-          <img
-            alt='kevin&apos;s picture'
-            src={require('/images/profpic3.jpg')}
-            style={{
-              width: isSmDown ? '200vw' : '300vw',
-              height: isSmDown ? '200vh' : '300vh',
-              objectFit: 'contain',
-              objectPosition: '50% 50%'
-            }}
-          />
+          <Box display='flex' justifyContent='center'>
+            <img
+              alt='kevin&apos;s picture'
+              src={'/images/profpic3.jpg'}
+              style={{
+                width: isSmDown ? '50%' : '90%',
+                height: isSmDown ? '50%' : '90%',
+                objectFit: 'contain',
+                objectPosition: '50% 50%'
+              }}
+            />
+          </Box>
         </Grid>
       </Grid>
       <BoxHeader label='Projects' />

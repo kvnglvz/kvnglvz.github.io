@@ -78,33 +78,35 @@ const ProjectView = (props) => {
           {
             isArray(projectDetails?.gallery) && (
               <Fragment>
-                <SwipeableViews
-                  index={activeStep}
-                  onChangeIndex={handleStepChange}
-                  enableMouseEvents
-                >
-                  {
-                    projectDetails.gallery.map((image, imageIdx) => (
-                      <Box key={`image-${imageIdx}`} display='flex' justifyContent='center'>
-                        {
-                          Math.abs(activeStep - imageIdx) <= 2 ? (
-                            // eslint-disable-next-line @next/next/no-img-element
-                            <img
-                              alt={`project-image-${imageIdx}`}
-                              src={require(image)}
-                              style={{
-                                width: '500vw',
-                                height: isSmDown ? '700vh': '500vh',
-                                objectFit: 'contain',
-                                objectPosition:'50% 50%'
-                              }}
-                            />
-                          ) : null
-                        }
-                      </Box>
-                    ))
-                  }
-                </SwipeableViews>
+                <Box display='flex' justifyContent='center'>
+                  <SwipeableViews
+                    index={activeStep}
+                    onChangeIndex={handleStepChange}
+                    enableMouseEvents
+                  >
+                    {
+                      projectDetails.gallery.map((image, imageIdx) => (
+                        <Box key={`image-${imageIdx}`} display='flex' justifyContent='center' height='100%' alignItems='center'>
+                          {
+                            Math.abs(activeStep - imageIdx) <= 2 ? (
+                              // eslint-disable-next-line @next/next/no-img-element
+                              <img
+                                alt={`project-image-${imageIdx}`}
+                                src={image}
+                                style={{
+                                  width: '65%',
+                                  height: '65%',
+                                  objectFit: 'contain',
+                                  objectPosition:'50% 50%'
+                                }}
+                              />
+                            ) : null
+                          }
+                        </Box>
+                      ))
+                    }
+                  </SwipeableViews>
+                </Box>
                 <MobileStepper
                   variant='dots'
                   steps={3}
