@@ -2,7 +2,7 @@ import { createStore, createHook, createSubscriber } from 'react-sweet-state';
 
 const AppStore = createStore({
   initialState: {
-    theme: 'light'
+    theme: 'dark'
   },
   actions: {
     setTheme: (theme) => ({ setState }) => (
