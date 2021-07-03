@@ -169,6 +169,54 @@ const Index = () => {
           }
         </List>
       </Box>
+      <BoxHeader label='Skills, tools and what&apos;s next' />
+      <Box p={1} display='flex' flexDirection='column'>
+        <List dense disablePadding>
+          {
+            [
+              'I do a lot of React/Material-UI, Node.js/Express for development.',
+              'I occasionally get to use React Native.',
+              'I am still improving on MongoDB and PostgreSQL',
+              'I had experience using Laravel/PHP but eventually favored something else more.',
+              'I virtually have forgotten about Unity3D and C# but retained OOP concepts, optimization techniques and memory management.',
+              'I want to learn Flutter/Dart and Python'
+            ].map((tools, toolsIdx) => (
+              <ListItem key={`tools-${toolsIdx}`}>
+                <ListItemText
+                  primary={tools}
+                  primaryTypographyProps={{ variant: 'body1' }}
+                />
+              </ListItem>
+            ))
+          }
+        </List>
+        {/* <List dense disablePadding>
+          {
+            map([{
+              name: 'React',
+              level: 'Advanced - '
+            }, {
+              name: 'Node.js',
+              level: ''
+            }, {
+              name: 'Unity3D and C#',
+              level: ''
+            }], (tools, toolIdx) => {
+              const { name, level } = tools;
+              // primary, secondary, body, gallery
+              return (
+                <ListItemText
+                  key={`tools-${toolIdx}`}
+                  primary={label}
+                  secondary={description}
+                  primaryTypographyProps={{ color: 'primary', variant: 'body1' }}
+                  secondaryTypographyProps={{ noWrap: true }}
+                />
+              )
+            })
+          }
+        </List> */}
+      </Box>
       <BoxHeader label='Public speaking' />
       <Box p={1} display='flex' flexDirection='column'>
         <List dense disablePadding>
