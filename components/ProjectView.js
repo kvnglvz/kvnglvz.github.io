@@ -1,13 +1,12 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { Fragment, useEffect, useState } from 'react';
 import { Grid, Box, Fab, useMediaQuery, Typography, MobileStepper, Button, Divider } from '@material-ui/core';
 import { makeStyles, useTheme } from '@material-ui/styles';
-import { KeyboardArrowLeft,  KeyboardArrowRight, Brightness7 as Brightness7Icon, Brightness4 as Brightness4Icon, Close as CloseIcon } from '@material-ui/icons'
-// import Image from 'next/image';
-import useWindowSize from '../hooks/useWindowSize'
-import SwipeableViews from 'react-swipeable-views';
+import { KeyboardArrowLeft,  KeyboardArrowRight, Brightness7, Brightness4 as Brightness4Icon, Close as CloseIcon } from '@material-ui/icons'
 import { find, isArray } from 'lodash';
 import { useRouter } from 'next/router';
 import projects from '../data/projects.json';
+import useWindowResize from '../hooks/useWindowResize';
 
 const useStyles = makeStyles((theme) => ({
   fab: {
@@ -17,11 +16,7 @@ const useStyles = makeStyles((theme) => ({
   },
   root: {
     position: 'relative',
-    display: 'flex',
-    flexGrow: 1,
-    height: '100%'
   },
-
   stepper: {
 
   }
@@ -32,10 +27,16 @@ const ProjectView = (props) => {
   const router = useRouter()
   const { project } = router.query;
   const [projectDetails, setProjectDetails] = useState(null);
+  const { height, width } = useWindowResize();
 
   const classes = useStyles();
   const theme = useTheme();
   const isSmDown = useMediaQuery(theme.breakpoints.down('sm'));
+  const isXs = useMediaQuery(theme.breakpoints.only('xs'));
+
+  const viewHeight = isXs ? height : (height - (height * 0.8));
+
+
   const [activeStep, setActiveStep] = useState(0);
 
   const handleNext = () => {
@@ -61,60 +62,30 @@ const ProjectView = (props) => {
     }
   }, [onClose, project]);
 
-  {/* <Image
-        alt={`project-image-${imageIdx}`}
-        src={image}
-        width='500vw'
-        height={isSmDown ? '700vh' : '500vh'}
-        objectFit='contain'
-        objectPosition='50% 50%'
-        quality={100}
-      /> */}
-
   return (
     <Box className={classes.root}>
       <Grid container>
-        <Grid item md={7} sm={12}>
+        <Grid item md={7} sm={12} xs={12}>
           {
             isArray(projectDetails?.gallery) && (
-              <Fragment>
-                <Box display='flex' justifyContent='center'>
-                  <SwipeableViews
-                    index={activeStep}
-                    onChangeIndex={handleStepChange}
-                    enableMouseEvents
-                  >
-                    {
-                      projectDetails.gallery.map((image, imageIdx) => (
-                        <Box key={`image-${imageIdx}`} display='flex' justifyContent='center' height='100%' alignItems='center'>
-                          {
-                            Math.abs(activeStep - imageIdx) <= 2 ? (
-                              // eslint-disable-next-line @next/next/no-img-element
-                              <img
-                                alt={`project-image-${imageIdx}`}
-                                src={image}
-                                style={{
-                                  width: '65%',
-                                  height: '65%',
-                                  objectFit: 'contain',
-                                  objectPosition:'50% 50%'
-                                }}
-                              />
-                            ) : null
-                          }
-                        </Box>
-                      ))
-                    }
-                  </SwipeableViews>
-                </Box>
+              <Box display='flex' flexDirection='column' overflow='hidden'>
+                <img
+                  key={'project-image'}
+                  alt={`project-image-${activeStep}`}
+                  src={projectDetails.gallery[activeStep]}
+                  height={isXs ? 600 : 500}
+                  style={{
+                    objectFit:'contain',
+                    objectPosition:'center center',
+                  }}
+                />
                 <MobileStepper
                   variant='dots'
-                  steps={3}
+                  steps={projectDetails.gallery.length || 0}
                   position='static'
                   activeStep={activeStep}
-                  // className={classes.root}
                   nextButton={
-                    <Button size='small' onClick={handleNext} disabled={activeStep === 2}>
+                    <Button size='small' onClick={handleNext} disabled={activeStep === (projectDetails.gallery.length - 1)}>
                       Next
                       {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
                     </Button>
@@ -126,12 +97,12 @@ const ProjectView = (props) => {
                     </Button>
                   }
                 />
-              </Fragment>
+              </Box>
             )
           }
         </Grid>
-        <Grid item md={5} sm={12}>
-          <Box m={2} mt={6} height={320}>
+        <Grid item md={5} sm={12} xs={12}>
+          <Box m={2} mt={isXs ? 2 : 6}>
             <Typography variant='h5' noWrap>
               { projectDetails?.label }
             </Typography>

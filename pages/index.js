@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { Box, IconButton, Button, Link, List, ListItem, ListItemText, Typography, Grid, Dialog, DialogContent } from '@material-ui/core';
+import { Box, IconButton, Button, Link, List, ListItem, ListItemText, Typography, Grid, Dialog, DialogContent, Divider } from '@material-ui/core';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import React, { useEffect, useState } from 'react';
 import Base from '../layout/Base';
@@ -9,26 +9,38 @@ import socials from '../data/socials.json';
 import publicSpeaking from '../data/publicSpeaking.json';
 import interests from '../data/interests.json';
 import projects from '../data/projects.json';
-import { Brightness7 as Brightness7Icon, Brightness4 as Brightness4Icon, Close as CloseIcon } from '@material-ui/icons';
+import { Brightness7 as Brightness7Icon, Brightness4 as Brightness4Icon, Close as CloseIcon, Twitter, LinkedIn, GitHub, Email } from '@material-ui/icons';
 import BoxHeader from '../components/BoxHeader';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Head from 'next/head'
 import { AppStoreSubscriber } from '../stores/appStore';
-// import Image from 'next/image';
 import ProjectView from '../components/ProjectView';
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
+import { Fragment } from 'react';
+
+const socialIcons = {
+  'Twitter': Twitter,
+  'LinkedIn': LinkedIn,
+  'GitHub': GitHub,
+  'Email': Email
+};
 
 const useStyles = makeStyles((theme) => ({
   linkPadding: {
     paddingLeft: theme.spacing(2)
   },
+  socialBox: {
+    '& > *': {
+      marginRight: theme.spacing(2)
+    },
+  }
 }));
 
 const Index = () => {
   const [open, setOpen] = useState(false);
-  const baseTheme = useTheme();
-  const isSmDown = useMediaQuery(baseTheme.breakpoints.down('sm'));
-  const isXs = useMediaQuery(baseTheme.breakpoints.only('xs'));
+  const theme = useTheme();
+  const isSmDown = useMediaQuery(theme.breakpoints.down('sm'));
+  const isXs = useMediaQuery(theme.breakpoints.only('xs'));
 
   const router = useRouter();
 
@@ -44,8 +56,6 @@ const Index = () => {
 
   useEffect(() => {
     if (router.query.project) {
-      // show the modal
-      console.log('yeah yeah baby');
       setOpen(true);
     } else {
       setOpen(false);
@@ -66,40 +76,63 @@ const Index = () => {
       <Grid container justify='center' alignItems='center' spacing={2} direction={isXs ? 'column-reverse' : 'row'}>
         <Grid item sm={8} xs={12}>
           <Box display='block' p={1} mb={6}>
+            {
+              !isXs && (
+                <AppStoreSubscriber>
+                  {({ theme }, { toggleTheme }) => (
+                    <IconButton edge='start' size='small' onClick={toggleTheme} >
+                      {theme === 'light' ? <Brightness4Icon /> : <Brightness7Icon />}
+                    </IconButton>
+                  )}
+                </AppStoreSubscriber>
+              )
+            }
+            <Typography variant='h6'>
+              Hi, my name is 
+            </Typography>
             <Typography variant='h4'>
               Kevin Galvez
             </Typography>
             <Typography paragraph variant='body1'>
-              Hi! I&apos;m Kevin. I&apos;m a programmer. I mostly work on web and mobile apps. I work in Baguio City. In my spare time, I try to play the piano and cook pasta.
+              a developer from Baguio City. I mostly work on web applications but is trying to spark fire (again) with mobile apps.
             </Typography>
-            <AppStoreSubscriber>
-              {({ theme }, { toggleTheme }) => (
-                <IconButton size='small' onClick={toggleTheme} >
-                  { theme === 'light' ? <Brightness4Icon/> : <Brightness7Icon /> }
-                </IconButton>
-              )}
-            </AppStoreSubscriber>
+            <Box display='flex' flexDirection='row' justifyContent='start' alignItems='start' className={classes.socialBox}>
+              {
+                isXs && (
+                  <Fragment>
+                    <AppStoreSubscriber>
+                      {({ theme }, { toggleTheme }) => (
+                        <IconButton edge='start' size='small' onClick={toggleTheme} >
+                          {theme === 'light' ? <Brightness4Icon /> : <Brightness7Icon />}
+                        </IconButton>
+                      )}
+                    </AppStoreSubscriber>
+                    <Divider orientation='vertical' flexItem />
+                  </Fragment>
+                )
+              }
+              {
+                map(socials, ({ link, label }, socialIdx) => (
+                  <IconButton key={`socials-${socialIdx}`}  edge='start' size='small' component='a' href={link} rel='noreferrer' target='_blank' >
+                    {
+                      React.createElement(socialIcons[label])
+                    }
+                  </IconButton>
+                ))
+              }
+            </Box>
           </Box>
         </Grid>
         <Grid item sm={4} xs={12}>
-          {/* <Image
-            alt='kevin&apos;s picture'
-            src='/images/profpic3.jpg'
-            width={isSmDown ? '200vw' : '300vw'}
-            height={isSmDown ? '200vh' : '300vh'}
-            objectFit='contain'
-            objectPosition='50% 50%'
-            quality={100}
-          /> */}
-          <Box display='flex' justifyContent='center'>
+          <Box>
             <img
               alt='kevin&apos;s picture'
-              src={'/images/profpic3.jpg'}
+              src='/images/profpic3.jpg'
+              width={'100%'}
+              height={isSmDown ? 200 : 300}
               style={{
-                width: isSmDown ? '50%' : '90%',
-                height: isSmDown ? '50%' : '90%',
-                objectFit: 'contain',
-                objectPosition: '50% 50%'
+                objectFit: 'scale-down',
+                objectPosition: 'center center',
               }}
             />
           </Box>
@@ -124,18 +157,6 @@ const Index = () => {
                 </ListItemLink>
               )
             })
-          }
-        </List>
-      </Box>
-      <BoxHeader label='Socials' />
-      <Box p={1} display='flex' flexDirection='column'>
-        <List dense disablePadding>
-          {
-            map(socials, ({ label, link }, socialIdx) => (
-              <ListItemLink key={`socials-${socialIdx}`} href={link} rel='noreferrer' target='_blank'>
-                <ListItemText primary={label} primaryTypographyProps={{ variant: 'body1', color: 'primary' }} />
-              </ListItemLink>
-            ))
           }
         </List>
       </Box>
@@ -193,9 +214,7 @@ const Index = () => {
         </List>
       </Box>
       <Dialog onClose={handleCloseDialog} maxWidth='md' fullWidth open={open} fullScreen={isSmDown}>
-        <DialogContent>
-          <ProjectView onClose={handleCloseDialog} />
-        </DialogContent>
+        <ProjectView onClose={handleCloseDialog} />
       </Dialog>
     </Base>
   );
