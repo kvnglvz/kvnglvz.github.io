@@ -13,7 +13,7 @@ import { Brightness7 as Brightness7Icon, Brightness4 as Brightness4Icon, Close a
 import BoxHeader from '../components/BoxHeader';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Head from 'next/head'
-import { AppStoreSubscriber } from '../stores/appStore';
+import { AppStoreSubscriber, useAppStore } from '../stores/appStore';
 import ProjectView from '../components/ProjectView';
 import { useRouter } from 'next/router';
 import { Fragment } from 'react';
@@ -26,6 +26,9 @@ const socialIcons = {
 };
 
 const useStyles = makeStyles((theme) => ({
+  imageGray: {
+    filter: 'grayscale(100%)'
+  },
   linkPadding: {
     paddingLeft: theme.spacing(2)
   },
@@ -38,6 +41,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Index = () => {
   const [open, setOpen] = useState(false);
+  const [,actions] = useAppStore();
   const theme = useTheme();
   const isSmDown = useMediaQuery(theme.breakpoints.down('sm'));
   const isXs = useMediaQuery(theme.breakpoints.only('xs'));
@@ -125,16 +129,21 @@ const Index = () => {
         </Grid>
         <Grid item sm={4} xs={12}>
           <Box>
-            <img
-              alt='kevin&apos;s picture'
-              src='/images/profpic3.jpg'
-              width={'100%'}
-              height={isSmDown ? 200 : 300}
-              style={{
-                objectFit: 'scale-down',
-                objectPosition: 'center center',
-              }}
-            />
+            <AppStoreSubscriber>
+              {({ theme }) => (
+                <img
+                  className={theme === 'light' ? classes.imageGray : ''}
+                  alt='kevin&apos;s picture'
+                  src='/images/profpic3.jpg'
+                  width={'100%'}
+                  height={isSmDown ? 200 : 300}
+                  style={{
+                    objectFit: 'scale-down',
+                    objectPosition: 'center center',
+                  }}
+                />
+              )}
+            </AppStoreSubscriber>
           </Box>
         </Grid>
       </Grid>

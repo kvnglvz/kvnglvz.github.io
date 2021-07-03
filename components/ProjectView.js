@@ -9,10 +9,16 @@ import projects from '../data/projects.json';
 import useWindowResize from '../hooks/useWindowResize';
 
 const useStyles = makeStyles((theme) => ({
+  fabRoot: {
+    height: theme.spacing(3),
+    width: theme.spacing(3),
+    minHeight: 0,
+  },
   fab: {
+    fontSize: '0.4rem',
     position: 'absolute',
-    top: theme.spacing(1),
-    right: theme.spacing(1)
+    top: theme.spacing(2),
+    right: theme.spacing(2)
   },
   root: {
     position: 'relative',
@@ -62,67 +68,77 @@ const ProjectView = (props) => {
     }
   }, [onClose, project]);
 
+  const hasGallery = projectDetails?.gallery && isArray(projectDetails.gallery) && projectDetails.gallery.length > 0
+
   return (
     <Box className={classes.root}>
       <Grid container>
-        <Grid item md={7} sm={12} xs={12}>
-          {
-            isArray(projectDetails?.gallery) && (
-              <Box display='flex' flexDirection='column' overflow='hidden'>
-                <img
-                  key={'project-image'}
-                  alt={`project-image-${activeStep}`}
-                  src={projectDetails.gallery[activeStep]}
-                  height={isXs ? 600 : 500}
-                  style={{
-                    objectFit:'contain',
-                    objectPosition:'center center',
-                  }}
-                />
-                <MobileStepper
-                  variant='dots'
-                  steps={projectDetails.gallery.length || 0}
-                  position='static'
-                  activeStep={activeStep}
-                  nextButton={
-                    <Button size='small' onClick={handleNext} disabled={activeStep === (projectDetails.gallery.length - 1)}>
-                      Next
-                      {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
-                    </Button>
-                  }
-                  backButton={
-                    <Button size='small' onClick={handleBack} disabled={activeStep === 0}>
-                      {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
-                      Back
-                    </Button>
-                  }
-                />
-              </Box>
-            )
-          }
-        </Grid>
-        <Grid item md={5} sm={12} xs={12}>
+        {
+          hasGallery && (
+            <Grid item md={7} sm={12} xs={12}>
+              {
+                isArray(projectDetails?.gallery) && (
+                  <Box display='flex' flexDirection='column' overflow='hidden'>
+                    <img
+                      key={'project-image'}
+                      alt={`project-image-${activeStep}`}
+                      src={projectDetails.gallery[activeStep]}
+                      height={isXs ? 600 : 500}
+                      style={{
+                        imageRendering: 'crisp-edges',
+                        objectFit:'scale-down',
+                        objectPosition:'center center',
+                      }}
+                    />
+                    <MobileStepper
+                      variant='dots'
+                      steps={projectDetails.gallery.length || 0}
+                      position='static'
+                      activeStep={activeStep}
+                      nextButton={
+                        <Button size='small' onClick={handleNext} disabled={activeStep === (projectDetails.gallery.length - 1)}>
+                          Next
+                          {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
+                        </Button>
+                      }
+                      backButton={
+                        <Button size='small' onClick={handleBack} disabled={activeStep === 0}>
+                          {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
+                          Back
+                        </Button>
+                      }
+                    />
+                  </Box>
+                )
+              }
+            </Grid>
+          )
+        }
+        <Grid item md={hasGallery ? 5 : 12} sm={12} xs={12}>
           <Box m={2} mt={isXs ? 2 : 6}>
-            <Typography variant='h5' noWrap>
+            <Typography variant='h5'>
               { projectDetails?.label }
             </Typography>
-            <Typography variant='body2' noWrap>
+            <Typography variant='body2'>
               {`Technology: ${projectDetails?.tech}`}
             </Typography>
             <Divider />
             <Box pt={2} pb={2}>
-              <Typography variant='body1' noWrap>
+              <Typography variant='body1'>
                 {projectDetails?.description}
               </Typography>
             </Box>
             <Divider />
-            <Typography paragraph variant='caption'>
+            <Typography paragraph variant='body2'>
               {`Responsibility: ${projectDetails?.responsibility}`}
             </Typography>
           </Box>
         </Grid>
       </Grid>
       <Fab
+        classes={{
+          root: classes.fabRoot
+        }}
         size='small'
         onClick={onClose}
         className={classes.fab}

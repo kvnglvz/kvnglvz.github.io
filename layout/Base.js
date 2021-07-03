@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Box } from '@material-ui/core';
 import { ThemeProvider, makeStyles } from '@material-ui/styles';
 import { light, dark } from '../config/theme';
@@ -13,7 +13,7 @@ const Base = ({ children }) => {
           <CssBaseline/>
           <Box position='relative' flexGrow={1}>
             <Container disableGutters maxWidth='sm'>
-              <Box m={2}>
+              <Box m={2} mt={6} mb={6}>
                 { children }
               </Box>
             </Container>

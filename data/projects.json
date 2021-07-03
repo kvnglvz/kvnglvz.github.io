@@ -1,97 +1,81 @@
 [{
   "slug": "moderation",
   "label": "Moderation platform",
-  "description": "Redis Monitoring Tool",
+  "description": "An application for content moderation. Converted designs from Figma to a React codebase. Spearheaded the base User Interface and components before turning it over.",
   "platform": "Web",
-  "tech": "React, Node.js, Redis",
+  "tech": "React",
   "responsibility": "Frontend",
   "group": "NMS PH PTY LTD",
   "date": "2021",
   "link": "",
-  "gallery": [
-    "/images/profpic1.jpg",
-    "/images/profpic2.jpg",
-    "/images/profpic3.jpg"
-  ]
+  "gallery": []
 }, {
   "slug": "accounts-platform",
   "label": "Account management platform",
-  "description": "Redis Monitoring Tool",
+  "description": "The core system used for authentication and authorization of employees/users/clients to different services and platforms of the company. Created the initial design of the accounts management suite.",
   "platform": "Web",
   "tech": "React",
   "responsibility": "Frontend",
   "group": "NMS PH PTY LTD",
   "date": "2020",
   "link": "",
-  "gallery": [
-    "/images/profpic1.jpg",
-    "/images/profpic2.jpg",
-    "/images/profpic3.jpg"
-  ]
+  "gallery": []
 }, {
   "slug": "finance-dashboard",
   "label": "Finance Dashboard",
-  "description": "",
+  "description": "Pieced together packages to create a dynamic dashboard and widgets like Analog/Digital global clock, Real-time foreign exchange, ForEx tools, Financial graphs and other tools to aid the finance department.",
   "platform": "Web",
   "tech": "React, Node.js, MongoDB",
-  "responsibility": "Fullstack",
+  "responsibility": "Frontend, Backend",
   "group": "NMS PH PTY LTD",
   "date": "2021",
   "link": "",
   "gallery": [
-    "/images/profpic1.jpg",
-    "/images/profpic2.jpg",
-    "/images/profpic3.jpg"
+    "/images/finance-dashboard/finance-dashboard-1.png",
+    "/images/finance-dashboard/finance-dashboard-2.png",
+    "/images/finance-dashboard/finance-dashboard-3.png",
+    "/images/finance-dashboard/finance-dashboard-4.png"
   ]
 }, {
   "slug": "forex-scraper",
   "label": "Foreign Exchange PDF Scraper",
-  "description": "",
+  "description": "A Node.js app that scrapes, calculates and stores Foreign Exchange data from PDF's to generate 'real-time' and historical rates accessible by API",
   "platform": "Web",
-  "tech": "Node.js",
-  "responsibility": "Frontend, Backend",
+  "tech": "Node.js, MongoDB",
+  "responsibility": "Backend",
   "group": "NMS PH PTY LTD",
   "date": "2020",
   "link": "",
-  "gallery": [
-    "/images/profpic1.jpg",
-    "/images/profpic2.jpg",
-    "/images/profpic3.jpg"
-  ]
+  "gallery": []
 }, {
   "slug": "geo-code",
   "label": "GEO Code API",
-  "description": "",
+  "description": "Node.js API for Countries, States, Cities and Barangies (for the Philippines) accessible by API. Philippines geological data from the Philippines Statistics Authority. https://psa.gov.ph/classification/psgc/",
   "platform": "Web",
-  "tech": "Node.js",
+  "tech": "Node.js, PostgreSQL",
   "responsibility": "Backend",
   "group": "NMS PH PTY LTD",
   "date": "2020",
   "link": "",
   "gallery": [
-    "/images/profpic1.jpg",
-    "/images/profpic2.jpg",
-    "/images/profpic3.jpg"
+    "/images/geo-code-api/geo-code-api-1.png",
+    "/images/geo-code-api/geo-code-api-2.png"
   ]
 }, {
   "slug": "redmontool",
   "label": "Redis monitoring tool",
-  "description": "Redis Monitoring Tool",
+  "description": "A web app for viewing the health of a Redis instance. Let's developers view current memory consumption, actions, logs and other information about a redis database.",
   "platform": "Web",
   "tech": "React, Node.js, Redis",
-  "responsibility": "Fullstack",
+  "responsibility": "Frontend, Backend",
   "group": "NMS PH PTY LTD",
   "date": "2020",
   "link": "",
-  "gallery": [
-    "/images/profpic1.jpg",
-    "/images/profpic2.jpg",
-    "/images/profpic3.jpg"
-  ]
+  "gallery": []
 }, {
   "slug": "mobile-chat-app",
-  "label": "Chat Application",
-  "description": "",
+  "label": "Mobile Chat Application",
+  "description": "Re-worked a mobile chat app made from Cordova to React Native. Basically improved everything from supporting touch gestures, implementing in-app camera features and improving overall performance and user experience.",
   "platform": "iOS, Android",
   "tech": "React Native, Realm DB, Socket.io",
   "responsibility": "Chat functionality, User Interface, Push Notification, App Management",
@@ -99,14 +83,14 @@
   "date": "2018",
   "link": "",
   "gallery": [
-    "/images/profpic1.jpg",
-    "/images/profpic2.jpg",
-    "/images/profpic3.jpg"
+    "/images/mobile-chat-app/mobile-chat-app-1.png",
+    "/images/mobile-chat-app/mobile-chat-app-2.png",
+    "/images/mobile-chat-app/mobile-chat-app-3.png"
   ]
 }, {
   "slug": "dodgy-skies",
   "label": "Dodgy Skies",
-  "description": "",
+  "description": "Be one of seven different characters able to dodge missiles while collecting stars, each in their own unique way. Level them up until they evolve for cooler looks and even more stars. Beat your own high score or challenge your friends and top the leaderboards now!",
   "platform": "iOS, Android",
   "tech": "Unity3D, C#",
   "responsibility": "Gameplay mechanics, User Interface, Ads, Monetization, App presence API, App Management",
@@ -114,14 +98,18 @@
   "date": "2015",
   "link": "",
   "gallery": [
-    "/images/profpic1.jpg",
-    "/images/profpic2.jpg",
-    "/images/profpic3.jpg"
+    "https://play-lh.googleusercontent.com/EuciLFdhELEGEpvMNAMONC6Og9K6oaaLB4ZXBGKWzsDAdKK2QbjM522m-9_YcuqLuRQ=w1920-h937-rw",
+    "https://play-lh.googleusercontent.com/jjMUIK7clKBHkcRYzbRU9FMQp6LEwDCIc7-MqcAMkmezzYKKshvkTW8ZNHs-wIBkKSc=w1920-h937-rw",
+    "https://play-lh.googleusercontent.com/DqfRZTv1h0FGRyY6yOBU0uUH8XmQSUCNVTahrk-HnmF4kxjI3br9tHWv_v6cwuFAFvMA=w1920-h937-rw",
+    "https://play-lh.googleusercontent.com/rw_sFXJj2LWPOCADDGpxiO0HCzdmvhprERtWrL6vq2HICcSI3XOLuXHhrgVsUt9Nqg=w1920-h937-rw",
+    "https://play-lh.googleusercontent.com/gmar09j9ew9z8G8J5BTF99n2HlvKVkgM_9_8zXSIQFdbTijyP9L_HQXb_P9doH8Ckw=w1920-h937-rw",
+    "https://play-lh.googleusercontent.com/PTwNt8FM-TYhD189IPao1Em6pGGXMd-Xr-Tmn0jFnvv-4I--vPXLi8dgu-ZgCkxIGwQ1=w1920-h937-rw",
+    "https://play-lh.googleusercontent.com/cjCjyts7WorsEjWW1fa4Om9GgBPckIig9N4N3STKI_dVeWY8cyHJclzDDTwj8jieY9A=w1920-h937-rw"
   ]
 }, {
   "slug": "what-bread",
   "label": "What Bread!",
-  "description": "",
+  "description": "Join Tina Pie on her baking adventure through Silly Con Valley! Travel through shiny business parks and meet insanely accurate archetypes, while taking orders for and packing up your delectable pastries. But watch out: get the orders out as soon as possible or watch your dreams come crashing down!",
   "platform": "iOS, Android",
   "tech": "Unity3D, C#",
   "responsibility": "User Interface, Ads, Monetization, App presence API, App Management",
@@ -129,14 +117,15 @@
   "date": "2015",
   "link": "",
   "gallery": [
-    "/images/profpic1.jpg",
-    "/images/profpic2.jpg",
-    "/images/profpic3.jpg"
+    "https://static.wixstatic.com/media/70d878_d72988f0185447ff96890e809324631a~mv2.png/v1/fill/w_450,h_802,al_c,q_90,usm_0.66_1.00_0.01/70d878_d72988f0185447ff96890e809324631a~mv2.webp",
+    "https://static.wixstatic.com/media/70d878_0dfecf0acf2e4673b6300cf95b21ba66~mv2.png/v1/fill/w_450,h_802,al_c,q_90,usm_0.66_1.00_0.01/70d878_0dfecf0acf2e4673b6300cf95b21ba66~mv2.webp",
+    "https://static.wixstatic.com/media/70d878_686297cd3d2e448ea900548df5c9ba3e~mv2.png/v1/fill/w_450,h_802,al_c,q_90,usm_0.66_1.00_0.01/70d878_686297cd3d2e448ea900548df5c9ba3e~mv2.webp",
+    "https://static.wixstatic.com/media/70d878_8a52a34e42484bce9df189b6aa888cee~mv2.png/v1/fill/w_450,h_802,al_c,q_90,usm_0.66_1.00_0.01/70d878_8a52a34e42484bce9df189b6aa888cee~mv2.webp"
   ]
 }, {
   "slug": "yurei-ninja",
   "label": "Yurei Ninja",
-  "description": "",
+  "description": "You: A ninja, back from the dead, seeking revenge against…The Enemy: A samurai warlord with the blackest of hearts who turned against you! Trained in the art of hiding and surprise attacks, avoid traps, strike down enemies and destroy deadly bosses, all trying to stop your quest.",
   "platform": "iOS, Android",
   "tech": "Unity3D, C#",
   "responsibility": "User Interface, Ads, Monetization, App presence API, App Management",
@@ -144,8 +133,9 @@
   "date": "2015",
   "link": "",
   "gallery": [
-    "/images/profpic1.jpg",
-    "/images/profpic2.jpg",
-    "/images/profpic3.jpg"
+    "https://static.wixstatic.com/media/70d878_19e7718721ce43179d38002f018de4f1~mv2.jpg/v1/fill/w_450,h_800,al_c,q_80/70d878_19e7718721ce43179d38002f018de4f1~mv2.webp",
+    "https://static.wixstatic.com/media/70d878_002cbbd1168a48749516dca1b4fffcae~mv2.jpg/v1/fill/w_450,h_800,al_c,q_80/70d878_002cbbd1168a48749516dca1b4fffcae~mv2.webp",
+    "https://static.wixstatic.com/media/70d878_80a4c72e59f84607ba36b45736ff1d47~mv2.jpg/v1/fill/w_450,h_800,al_c,q_80/70d878_80a4c72e59f84607ba36b45736ff1d47~mv2.webp",
+    "https://static.wixstatic.com/media/70d878_715c4d9985764111b035fbf7eb2e95b8~mv2.jpg/v1/fill/w_450,h_800,al_c,q_80/70d878_715c4d9985764111b035fbf7eb2e95b8~mv2.webp"
   ]
 }]
