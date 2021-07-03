@@ -176,10 +176,10 @@ const Index = () => {
             [
               'I do a lot of React/Material-UI, Node.js/Express for development.',
               'I occasionally get to use React Native.',
-              'I am still improving on MongoDB and PostgreSQL',
-              'I had experience using Laravel/PHP but eventually favored something else more.',
+              'I am still improving on MongoDB, PostgreSQL and Redis',
+              'I had experience using Laravel/PHP and RabbitMQ',
               'I virtually have forgotten about Unity3D and C# but retained OOP concepts, optimization techniques and memory management.',
-              'I want to learn Flutter/Dart and Python'
+              'I want to learn Flutter/Dart, Python and GraphQL'
             ].map((tools, toolsIdx) => (
               <ListItem key={`tools-${toolsIdx}`}>
                 <ListItemText
