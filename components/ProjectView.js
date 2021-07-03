@@ -120,10 +120,13 @@ const ProjectView = (props) => {
               { projectDetails?.label }
             </Typography>
             <Typography variant='body2'>
-              {`Technology: ${projectDetails?.tech}`}
+              {`Platform: ${projectDetails?.platform}`}
             </Typography>
             <Divider />
             <Box pt={2} pb={2}>
+              <Typography variant='caption'>
+                {`Technology: ${projectDetails?.tech}`}
+              </Typography>
               <Typography variant='body1'>
                 {projectDetails?.description}
               </Typography>
