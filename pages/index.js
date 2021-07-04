@@ -7,6 +7,7 @@ import { map } from 'lodash';
 import ListItemLink from '../components/ListItemLink';
 import socials from '../data/socials.json';
 import publicSpeaking from '../data/publicSpeaking.json';
+import skills from '../data/skills.json';
 import interests from '../data/interests.json';
 import projects from '../data/projects.json';
 import { Brightness7 as Brightness7Icon, Brightness4 as Brightness4Icon, Close as CloseIcon, Twitter, LinkedIn, GitHub, Email } from '@material-ui/icons';
@@ -173,49 +174,18 @@ const Index = () => {
       <Box p={1} display='flex' flexDirection='column'>
         <List dense disablePadding>
           {
-            [
-              'I do a lot of React/Material-UI, Node.js/Express for development.',
-              'I occasionally get to use React Native.',
-              'I am still improving on MongoDB, PostgreSQL and Redis',
-              'I had experience using Laravel/PHP and RabbitMQ',
-              'I virtually have forgotten about Unity3D and C# but retained OOP concepts, optimization techniques and memory management.',
-              'I want to learn Flutter/Dart, Python and GraphQL'
-            ].map((tools, toolsIdx) => (
+            skills.map(({ primary, secondary }, toolsIdx) => (
               <ListItem key={`tools-${toolsIdx}`}>
                 <ListItemText
-                  primary={tools}
-                  primaryTypographyProps={{ variant: 'body1' }}
+                  primary={primary}
+                  secondary={secondary}
+                  primaryTypographyProps={{ color: 'textSecondary', variant: 'body2' }}
+                  secondaryTypographyProps={{ color: 'inherit', variant: 'body1' }}
                 />
               </ListItem>
             ))
           }
         </List>
-        {/* <List dense disablePadding>
-          {
-            map([{
-              name: 'React',
-              level: 'Advanced - '
-            }, {
-              name: 'Node.js',
-              level: ''
-            }, {
-              name: 'Unity3D and C#',
-              level: ''
-            }], (tools, toolIdx) => {
-              const { name, level } = tools;
-              // primary, secondary, body, gallery
-              return (
-                <ListItemText
-                  key={`tools-${toolIdx}`}
-                  primary={label}
-                  secondary={description}
-                  primaryTypographyProps={{ color: 'primary', variant: 'body1' }}
-                  secondaryTypographyProps={{ noWrap: true }}
-                />
-              )
-            })
-          }
-        </List> */}
       </Box>
       <BoxHeader label='Public speaking' />
       <Box p={1} display='flex' flexDirection='column'>

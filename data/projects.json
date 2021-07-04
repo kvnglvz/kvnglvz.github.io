@@ -1,7 +1,7 @@
 [{
   "slug": "moderation",
   "label": "Moderation platform",
-  "description": "An application for content moderation. Converted designs from Figma to a React codebase. Spearheaded the base User Interface and components before turning it over.",
+  "description": "A web app for content moderation. Converted designs from Figma to a React codebase. Spearheaded the base UI and components before turning it over.",
   "platform": "Web",
   "tech": "React",
   "responsibility": "Frontend",
@@ -12,7 +12,7 @@
 }, {
   "slug": "accounts-platform",
   "label": "Account management platform",
-  "description": "The core system used for authentication and authorization of employees/users/clients to different services and platforms of the company. Created the initial design of the accounts management suite.",
+  "description": "A core system used for authentication and authorization of users to different services and platforms. Created the initial design, functionalities and back-end connection of the accounts management suite.",
   "platform": "Web",
   "tech": "React",
   "responsibility": "Frontend",
@@ -21,9 +21,20 @@
   "link": "",
   "gallery": []
 }, {
+  "slug": "nms-apps",
+  "label": "NMS Apps",
+  "description": "A collection of interconnected applications and services. Provides User management, Platform Authentication/Authorization, Talent management, Human Resource, Financial tools and business platforms.",
+  "platform": "Web, Mobile",
+  "tech": "React, Node.js, Laravel, Redis, SQL",
+  "responsibility": "Project Management, Co-lead, Code Review, Mentoring, Frontend, Backend",
+  "group": "NMS PH PTY LTD",
+  "date": "2020",
+  "link": "",
+  "gallery": []
+}, {
   "slug": "finance-dashboard",
   "label": "Finance Dashboard",
-  "description": "Pieced together packages to create a dynamic dashboard and widgets like Analog/Digital global clock, Real-time foreign exchange, ForEx tools, Financial graphs and other tools to aid the finance department.",
+  "description": "Pieced together packages to create a dynamic dashboard with widgets like Analog/Digital global clock, Real-time foreign exchange, ForEx tools, Financial graphs and other tools to aid finance teams.",
   "platform": "Web",
   "tech": "React, Node.js, MongoDB",
   "responsibility": "Frontend, Backend",

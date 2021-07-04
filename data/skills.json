@@ -1,0 +1,19 @@
+[{
+  "primary": "I mostly use",
+  "secondary": "React, Node.js."
+}, {
+  "primary": "I occasionally get to do projects with",
+  "secondary": "React Native"
+}, {
+  "primary": "I am still improving on",
+  "secondary": "MongoDB, PostgreSQL, Redis"
+}, {
+  "primary": "I had experience using",
+  "secondary": "Laravel, RabbitMQ, Unity3D, C#"
+}, {
+  "primary": "I have retained",
+  "secondary": "OOP concepts, optimization techniques, memory management."
+}, {
+  "primary": "I want to learn",
+  "secondary": "Flutter/Dart, Python, GraphQL, TypeScript"
+}]

@@ -7,6 +7,7 @@ import { find, isArray } from 'lodash';
 import { useRouter } from 'next/router';
 import projects from '../data/projects.json';
 import useWindowResize from '../hooks/useWindowResize';
+import SwipeableViews from 'react-swipeable-views';
 
 const useStyles = makeStyles((theme) => ({
   fabRoot: {
@@ -76,46 +77,54 @@ const ProjectView = (props) => {
         {
           hasGallery && (
             <Grid item md={7} sm={12} xs={12}>
-              {
-                isArray(projectDetails?.gallery) && (
-                  <Box display='flex' flexDirection='column' overflow='hidden'>
-                    <img
-                      key={'project-image'}
-                      alt={`project-image-${activeStep}`}
-                      src={projectDetails.gallery[activeStep]}
-                      height={isXs ? 600 : 500}
-                      style={{
-                        imageRendering: 'crisp-edges',
-                        objectFit:'scale-down',
-                        objectPosition:'center center',
-                      }}
-                    />
-                    <MobileStepper
-                      variant='dots'
-                      steps={projectDetails.gallery.length || 0}
-                      position='static'
-                      activeStep={activeStep}
-                      nextButton={
-                        <Button size='small' onClick={handleNext} disabled={activeStep === (projectDetails.gallery.length - 1)}>
-                          Next
-                          {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
-                        </Button>
-                      }
-                      backButton={
-                        <Button size='small' onClick={handleBack} disabled={activeStep === 0}>
-                          {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
-                          Back
-                        </Button>
-                      }
-                    />
-                  </Box>
-                )
-              }
+              <Box display='flex' flexDirection='column' overflow='hidden'>
+                <SwipeableViews
+                  axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+                  index={activeStep}
+                  onChangeIndex={handleStepChange}
+                  enableMouseEvents
+                >
+                  {
+                    projectDetails.gallery.map((image, imageIdx) => (
+                      <img
+                        key={`project-image-${imageIdx}`}
+                        alt={`${projectDetails.slug}-image-${imageIdx}`}
+                        src={image}
+                        width={'100%'}
+                        height={500}
+                        style={{
+                          imageRendering: 'crisp-edges',
+                          objectFit: 'scale-down',
+                          objectPosition: 'center center',
+                        }}
+                      />
+                    ))
+                  }
+                </SwipeableViews>
+                <MobileStepper
+                  variant='dots'
+                  steps={projectDetails.gallery.length || 0}
+                  position='static'
+                  activeStep={activeStep}
+                  nextButton={
+                    <Button size='small' onClick={handleNext} disabled={activeStep === (projectDetails.gallery.length - 1)}>
+                      Next
+                      {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
+                    </Button>
+                  }
+                  backButton={
+                    <Button size='small' onClick={handleBack} disabled={activeStep === 0}>
+                      {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
+                      Back
+                    </Button>
+                  }
+                />
+              </Box>
             </Grid>
           )
         }
         <Grid item md={hasGallery ? 5 : 12} sm={12} xs={12}>
-          <Box m={2} mt={isXs ? 2 : 6}>
+          <Box m={2} mt={isXs && hasGallery ? 2 : 6}>
             <Typography variant='h5'>
               { projectDetails?.label }
             </Typography>

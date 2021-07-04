@@ -17,12 +17,24 @@ const light = createMuiTheme({
         marginTop: 0,
         marginBottom: 0
       }
+    },
+    MuiDialogContent: {
+      root: {
+        '&:first-child': {
+          paddingTop: 0
+        },
+        padding: 0,
+      },
     }
   },
   palette: {
     type: 'light',
+    background: {
+      default: colors.grey[300],
+      paper: colors.grey[300]
+    },
     primary: {
-      main: colors.blue[700]
+      main: colors.blue[800]
     }
   },
   typography: {
@@ -61,7 +73,7 @@ const light = createMuiTheme({
     },
     caption: {
       fontFamily: "'IBM Plex Sans', 'Arial', sans-serif",
-    }
+    },
   },
   shadows: Array(25).fill('none')
 });
@@ -138,7 +150,7 @@ const dark = createMuiTheme({
     },
     caption: {
       fontFamily: "'IBM Plex Sans', 'Arial', sans-serif",
-    }
+    },
   },
   shadows: Array(25).fill('none')
 });
