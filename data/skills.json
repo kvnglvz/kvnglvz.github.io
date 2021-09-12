@@ -1,6 +1,6 @@
 [{
   "primary": "I mostly use",
-  "secondary": "React, Node.js."
+  "secondary": "React, Node.js., Docker"
 }, {
   "primary": "I occasionally get to do projects with",
   "secondary": "React Native"
@@ -15,5 +15,5 @@
   "secondary": "OOP concepts, optimization techniques, memory management."
 }, {
   "primary": "I want to learn",
-  "secondary": "Flutter/Dart, Python, GraphQL, TypeScript"
+  "secondary": "TypeScript, Flutter/Dart, Python, GraphQL"
 }]
