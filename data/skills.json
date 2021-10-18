@@ -2,7 +2,7 @@
   "primary": "I mostly use",
   "secondary": "React, Node.js., Docker"
 }, {
-  "primary": "I occasionally get to do projects with",
+  "primary": "I occasionally get to do projects using",
   "secondary": "React Native"
 }, {
   "primary": "I am still improving on",
@@ -15,5 +15,5 @@
   "secondary": "OOP concepts, optimization techniques, memory management."
 }, {
   "primary": "I want to learn",
-  "secondary": "TypeScript, Flutter/Dart, Python, GraphQL"
+  "secondary": "TypeScript, Solidity, Blockchain tech, Nest.js, Flutter/Dart, Python, GraphQL"
 }]

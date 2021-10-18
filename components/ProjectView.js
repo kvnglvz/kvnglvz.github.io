@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { Fragment, useEffect, useState } from 'react';
-import { Grid, Box, Fab, useMediaQuery, Typography, MobileStepper, Button, Divider } from '@material-ui/core';
+import { Grid, Box, Fab, useMediaQuery, Typography, MobileStepper, Button, Divider, Toolbar, IconButton } from '@material-ui/core';
 import { makeStyles, useTheme } from '@material-ui/styles';
 import { KeyboardArrowLeft,  KeyboardArrowRight, Brightness7, Brightness4 as Brightness4Icon, Close as CloseIcon } from '@material-ui/icons'
 import { find, isArray } from 'lodash';
@@ -10,22 +10,10 @@ import useWindowResize from '../hooks/useWindowResize';
 import SwipeableViews from 'react-swipeable-views';
 
 const useStyles = makeStyles((theme) => ({
-  fabRoot: {
-    height: theme.spacing(3),
-    width: theme.spacing(3),
-    minHeight: 0,
-  },
-  fab: {
-    fontSize: '0.4rem',
-    position: 'absolute',
-    top: theme.spacing(2),
-    right: theme.spacing(2)
-  },
-  root: {
-    position: 'relative',
-  },
-  stepper: {
-
+  toolbar: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'flex-end'
   }
 }))
 
@@ -42,7 +30,6 @@ const ProjectView = (props) => {
   const isXs = useMediaQuery(theme.breakpoints.only('xs'));
 
   const viewHeight = isXs ? height : (height - (height * 0.8));
-
 
   const [activeStep, setActiveStep] = useState(0);
 
@@ -73,7 +60,16 @@ const ProjectView = (props) => {
 
   return (
     <Box className={classes.root}>
+      <Toolbar variant='dense' className={classes.toolbar}>
+        <IconButton
+          size='small'
+          onClick={onClose}
+        >
+          <CloseIcon />
+        </IconButton>
+      </Toolbar>
       <Grid container>
+
         {
           hasGallery && (
             <Grid item md={7} sm={12} xs={12}>
@@ -124,7 +120,7 @@ const ProjectView = (props) => {
           )
         }
         <Grid item md={hasGallery ? 5 : 12} sm={12} xs={12}>
-          <Box m={2} mt={isXs && hasGallery ? 2 : 6}>
+          <Box m={2}>
             <Typography variant='h5'>
               { projectDetails?.label }
             </Typography>
@@ -147,16 +143,6 @@ const ProjectView = (props) => {
           </Box>
         </Grid>
       </Grid>
-      <Fab
-        classes={{
-          root: classes.fabRoot
-        }}
-        size='small'
-        onClick={onClose}
-        className={classes.fab}
-      >
-        <CloseIcon />
-      </Fab>
     </Box>
   )
 };
