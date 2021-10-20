@@ -75,7 +75,7 @@ const Index = () => {
         <meta charSet='utf-8' />
         <meta name='viewport' content='minimum-scale=1, initial-scale=1, width=device-width'/>
         <meta name='theme-color' content='#000000' />
-        <meta name='description' content='🐈 Kevin Galvez&apos; portfolio || Application developer from 2600 Philippines' />
+        <meta name='description' content='Kevin Galvez&apos; portfolio || Application developer from 2600 Philippines' />
       </Head>
 
       <Grid container justify='center' alignItems='center' spacing={2} direction={isXs ? 'column-reverse' : 'row'}>
@@ -96,7 +96,7 @@ const Index = () => {
               Hi, my name is 
             </Typography>
             <Typography variant='h4'>
-              Kevin Galvez
+            🐈 Kevin Galvez
             </Typography>
             <Typography paragraph variant='body1'>
               a developer from Baguio City. I mostly work on web applications but is trying to spark fire (again) with mobile apps.
