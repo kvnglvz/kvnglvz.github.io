@@ -1,4 +1,15 @@
 [{
+  "slug": "moderation-demo",
+  "label": "Moderation Demo site",
+  "description": "A web app for clients to test the moderation platform. Allows upload text, images, and videos to the moderation platform. Groundup designed and developed the UI/UX and backend functionalities",
+  "platform": "Web",
+  "tech": "React, Socket.io, Nest.js, Node.js, Docker",
+  "responsibility": "Frontend, Backend",
+  "group": "NMS PH PTY LTD",
+  "date": "2021",
+  "link": "",
+  "gallery": []
+}, {
   "slug": "moderation",
   "label": "Moderation platform",
   "description": "A web app for content moderation. Converted designs from Figma to a React codebase. Spearheaded the base UI development and largely contributed in fixing memory leaks, websocket implementation, UI/UX revisions and deployment",
