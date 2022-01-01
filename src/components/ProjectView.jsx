@@ -1,31 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { Grid, Box, useMediaQuery, Typography, MobileStepper, Button, Divider, Toolbar, IconButton } from '@mui/material';
-import { makeStyles, useTheme } from '@mui/styles';
+import { Grid, Box, Typography, MobileStepper, Button, Divider, Toolbar, IconButton } from '@mui/material';
+import { useTheme } from '@mui/styles';
 import { KeyboardArrowLeft, KeyboardArrowRight, Close as CloseIcon } from '@mui/icons-material';
-import { find, isArray } from 'lodash';
-import projects from '../data/projects.json';
 import SwipeableViews from 'react-swipeable-views';
-import { useWindowSize } from '../hooks/useWindowSize';
 import { Navigate } from 'react-router-dom';
-
-const useStyles = makeStyles((theme) => ({
-  toolbar: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'flex-end'
-  }
-}));
 
 const ProjectView = (props) => {
   const { project, onClose } = props;
-  const { height, width } = useWindowSize();
 
-  const classes = useStyles();
   const theme = useTheme();
-  const isSmDown = useMediaQuery(theme.breakpoints.down('md'));
-  const isXs = useMediaQuery(theme.breakpoints.only('xs'));
-
-  const viewHeight = isXs ? height : (height - (height * 0.8));
 
   const [activeStep, setActiveStep] = useState(0);
 
@@ -41,9 +24,9 @@ const ProjectView = (props) => {
     setActiveStep(step);
   };
 
-  useEffect(() => {
-    if (!project && typeof onClose === 'function') onClose();
-  }, [onClose, project]);
+  // useEffect(() => {
+  //   if (!project && typeof onClose === 'function') onClose();
+  // }, [onClose, project]);
 
   const hasGallery = (
     project?.gallery
@@ -56,8 +39,15 @@ const ProjectView = (props) => {
   }
 
   return (
-    <Box className={classes.root}>
-      <Toolbar variant='dense' className={classes.toolbar}>
+    <Box>
+      <Toolbar
+        variant='dense'
+        sx={{
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'flex-end'    
+        }}
+      >
         <IconButton
           size='small'
           onClick={onClose}
@@ -66,7 +56,6 @@ const ProjectView = (props) => {
         </IconButton>
       </Toolbar>
       <Grid container>
-
         {
           hasGallery && (
             <Grid item md={7} sm={12} xs={12}>

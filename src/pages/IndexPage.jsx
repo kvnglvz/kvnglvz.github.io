@@ -70,11 +70,13 @@ export const IndexPage = () => {
       {
         isSmDown ? (
           <Dialog
-            onClose={handleClearProject}
+            PaperComponent={Box}
             maxWidth={false}
             fullWidth
+            fullScreen
             open={Boolean(project)}
-            fullScreen={isSmDown}
+            onClose={handleClearProject}
+            TransitionComponent={Transition}
           >
             <ProjectView
               project={project}
@@ -97,8 +99,8 @@ export const IndexPage = () => {
             }}
             maxWidth={false}
             open={Boolean(project)}
-            TransitionComponent={Transition}
             onClose={handleClearProject}
+            TransitionComponent={Transition}
           >
             <Box
               sx={{
