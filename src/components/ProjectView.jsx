@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import { Grid, Box, Typography, MobileStepper, Button, Divider, Toolbar, IconButton } from '@mui/material';
 import { useTheme } from '@mui/styles';
 import { KeyboardArrowLeft, KeyboardArrowRight, Close as CloseIcon } from '@mui/icons-material';
@@ -39,7 +39,7 @@ const ProjectView = (props) => {
   }
 
   return (
-    <Box>
+    <Fragment>
       <Toolbar
         variant='dense'
         sx={{
@@ -129,7 +129,7 @@ const ProjectView = (props) => {
           </Box>
         </Grid>
       </Grid>
-    </Box>
+    </Fragment>
   );
 };
 

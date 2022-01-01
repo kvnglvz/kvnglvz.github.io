@@ -71,6 +71,11 @@ export const IndexPage = () => {
         isSmDown ? (
           <Dialog
             PaperComponent={Box}
+            PaperProps={{
+              sx: {
+                bgcolor: 'background.default'
+              }
+            }}
             maxWidth={false}
             fullWidth
             fullScreen
