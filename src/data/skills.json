@@ -2,11 +2,8 @@
   "primary": "I mostly use",
   "secondary": "React, Node.js., Docker"
 }, {
-  "primary": "I occasionally get to do projects using",
-  "secondary": "React Native"
-}, {
   "primary": "I am still improving on",
-  "secondary": "MongoDB, PostgreSQL, Redis"
+  "secondary": "MongoDB, PostgreSQL, Redis, TypeScript, Nest.js, React Native"
 }, {
   "primary": "I had experience using",
   "secondary": "Laravel, RabbitMQ, Unity3D, C#, Vue"
@@ -15,5 +12,5 @@
   "secondary": "OOP concepts, optimization techniques, memory management."
 }, {
   "primary": "I want to learn",
-  "secondary": "TypeScript, Solidity, Blockchain tech, Nest.js, Flutter/Dart, Python, GraphQL"
+  "secondary": "Flutter/Dart, GraphQL"
 }]
