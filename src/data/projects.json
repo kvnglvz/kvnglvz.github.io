@@ -78,10 +78,10 @@
   "gallery": []
 }, {
   "slug": "geo-code",
-  "label": "GEO Code API",
-  "description": "Node.js API for Countries, States, Cities and Barangies (for the Philippines) accessible by API. Philippines geological data from the Philippines Statistics Authority. https://psa.gov.ph/classification/psgc/",
+  "label": "API system",
+  "description": "An API system for data and api key generation. Currently includes data for Countries, States, Cities and Barangies (for the Philippines) accessible by API. Philippines geological data from the Philippines Statistics Authority. https://psa.gov.ph/classification/psgc/",
   "platform": "Web",
-  "tech": "Node.js, PostgreSQL",
+  "tech": "Nest.js, PostgreSQL",
   "responsibility": "Backend",
   "group": "NMS PH PTY LTD",
   "date": "2020",
@@ -90,17 +90,6 @@
     "/images/geo-code-api/geo-code-api-1.png",
     "/images/geo-code-api/geo-code-api-2.png"
   ]
-}, {
-  "slug": "redmontool",
-  "label": "Redis monitoring tool",
-  "description": "A web app for viewing the health of a Redis instance. Let's developers view current memory consumption, actions, logs and other information about a redis database.",
-  "platform": "Web",
-  "tech": "React, Node.js, Redis",
-  "responsibility": "Frontend, Backend",
-  "group": "NMS PH PTY LTD",
-  "date": "2020",
-  "link": "",
-  "gallery": []
 }, {
   "slug": "mobile-chat-app",
   "label": "Mobile Chat Application",

@@ -8,6 +8,7 @@ import { ProfileBox } from '../components/ProfileBox';
 import { ProjectPreviewBox } from '../components/ProjectPreviewBox';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import projects from '../data/projects.json';
+import experiments from '../data/experiments.json';
 
 const Transition = forwardRef(function Transition(props, ref) {
   return (
@@ -25,6 +26,7 @@ export const IndexPage = () => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const projectCode = searchParams.get('project');
+  const experimentCode = searchParams.get('experiment');
   const [project, setProject] = useState(null);
   const { width, height } = useWindowSize();
 
@@ -42,6 +44,14 @@ export const IndexPage = () => {
       setProject(null);
     }
   }, [projectCode]);
+
+  useEffect(() => {
+    if (experimentCode) {
+      setProject(experiments.find((experiment) => experiment.slug === experimentCode));
+    } else {
+      setProject(null);
+    }
+  }, [experimentCode]);
 
   return (
     <Box

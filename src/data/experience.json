@@ -1,5 +1,16 @@
 [{
-
+  "company": "Valhalla Online Services",
+  "position": "Fullstack Developer",
+  "work": "Stuffs",
+  "duration": "2022-05 - Current"
 }, {
-  
+  "company": "New Media Services PTY. Ltd.",
+  "position": "Mobile, Frontend, & Backend developer",
+  "work": "Frontend, Backend, Mobile dev, Mentor, Research & Development",
+  "duration": "2018-02 - 2022-05"
+},{
+  "company": "Animal Cracker Games (formerly Fish Cracker Games)",
+  "position": "Unity3D developer",
+  "work": "API integration, Monetization, Ad Integration, Game systems, User interface, Binary management & deployment",
+  "duration": "2014-06 - 2018-01"
 }]

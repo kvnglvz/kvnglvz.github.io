@@ -11,6 +11,8 @@ import publicSpeaking from '../data/publicSpeaking.json';
 import skills from '../data/skills.json';
 import interests from '../data/interests.json';
 import projects from '../data/projects.json';
+import experiences from '../data/experience.json';
+import experiments from '../data/experiments.json';
 
 import './ProfileBox.css';
 import { useNavigate, useSearchParams } from 'react-router-dom';
@@ -146,6 +148,67 @@ export const ProfileBox = () => {
           }
         </List>
       </Box>
+      <BoxHeader label='Experiments' />
+      <Box p={1} display='flex' flexDirection='column'>
+        <List dense disablePadding>
+          {
+            experiments && experiments.map && experiments.map((experiments, expirementsIdx) => {
+              const { slug, label, link } = experiments;
+              // primary, secondary, body, gallery
+              return (
+                <ListItemLink
+                  key={`experiments-${slug}-${expirementsIdx}`}
+                  onClick={() => (
+                    setSearchParams({
+                      experiment: slug
+                    })
+                  )}
+                >
+                  <ListItemText
+                    primary={label}
+                    primaryTypographyProps={{ color: 'primary', variant: 'body1' }}
+                  />
+                  { link && (
+                    <PaddedLink href={link} rel='noreferrer' target='_blank'>
+                      Link</PaddedLink>
+                  )}
+                </ListItemLink>
+              );
+            })
+          }
+        </List>
+      </Box>
+      {
+        experiences && experiences.length > 0 && (
+          <Fragment>
+            <BoxHeader label='Work experience' />
+            <Box p={1} display='flex' flexDirection='column'>
+              <List dense disablePadding>
+                {
+                  experiences && experiences.map && experiences.map((experience, expIdx) => {
+                    const { company, position, work, duration } = experience;
+                    return (
+                      <ListItem key={`experience-${expIdx}`}>
+                        <ListItemText
+                          primary={`${company} (${duration})`}
+                          secondary={`${position} | ${work}`}
+                          primaryTypographyProps={{ variant: 'body1' }}
+                          secondaryTypographyProps={{ noWrap: false }}
+                        />
+                        {/* { resources && (
+                          <PaddedLink href={resources} rel='noreferrer' target='_blank'>
+                            {resources_label}
+                          </PaddedLink>
+                        )} */}
+                      </ListItem>
+                    );
+                  })
+                }
+              </List>
+            </Box>
+          </Fragment>
+        )
+      }
       <BoxHeader label='Skills, tools and what&apos;s next' />
       <Box p={1} display='flex' flexDirection='column'>
         <List dense disablePadding>
@@ -170,7 +233,7 @@ export const ProfileBox = () => {
             publicSpeaking && publicSpeaking.map && publicSpeaking.map(({ label, description, resources, resources_label, date }, publicSpeakingIdx) => (
               <ListItem key={`publicSpeaking-${publicSpeakingIdx}`}>
                 <ListItemText
-                  primary={`${label} - ${date}`}
+                  primary={`${label} (${date})`}
                   secondary={description}
                   primaryTypographyProps={{ variant: 'body1' }}
                   secondaryTypographyProps={{ noWrap: true }}

@@ -1,0 +1,25 @@
+[{
+  "slug": "nms-mobile-app",
+  "label": "Prototype Mobile application",
+  "description": "A prototype mobile app",
+  "platform": "iOS, Android",
+  "tech": "React Native, MMKV",
+  "responsibility": "UI/UX, OAuth integration, Connectivity with internal application API's",
+  "group": "NMS PH PTY LTD",
+  "date": "2021",
+  "link": "",
+  "gallery": [
+    "/images/company-app/1.jpeg"
+  ]
+}, {
+  "slug": "redmontool",
+  "label": "Redis monitoring tool",
+  "description": "A web app for viewing the health of a Redis instance. Let's developers view current memory consumption, actions, logs and other information about a redis database.",
+  "platform": "Web",
+  "tech": "React, Node.js, Redis",
+  "responsibility": "Frontend, Backend",
+  "group": "NMS PH PTY LTD",
+  "date": "2020",
+  "link": "",
+  "gallery": []
+}]

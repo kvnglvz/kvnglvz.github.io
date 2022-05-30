@@ -11,7 +11,7 @@ export const lightTheme = createTheme({
   palette: {
     mode: 'light',
     primary: {
-      main: blue[700],
+      main: blue[800],
     },
   },
   typography: {
@@ -75,7 +75,7 @@ export const darkTheme = createTheme({
   palette: {
     mode:'dark',
     primary: {
-      main: yellow[200],
+      main: yellow[100],
     },
   },
   typography: {
