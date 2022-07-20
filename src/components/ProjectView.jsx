@@ -1,6 +1,5 @@
 import React, { Fragment, useEffect, useState } from 'react';
-import { Grid, Box, Typography, MobileStepper, Button, Divider, Toolbar, IconButton } from '@mui/material';
-import { useTheme } from '@mui/styles';
+import { Grid, Box, Typography, MobileStepper, Button, Divider, Toolbar, IconButton, useTheme } from '@mui/material';
 import { KeyboardArrowLeft, KeyboardArrowRight, Close as CloseIcon } from '@mui/icons-material';
 import SwipeableViews from 'react-swipeable-views';
 import { Navigate } from 'react-router-dom';

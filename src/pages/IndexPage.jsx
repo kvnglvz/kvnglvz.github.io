@@ -1,5 +1,5 @@
 import { Box, Dialog, Slide } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
+import { useTheme } from '@mui/material';
 import React, { forwardRef, useEffect, useState } from 'react';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import ProjectView from '../components/ProjectView';
