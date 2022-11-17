@@ -1,6 +1,6 @@
-import React, { Fragment } from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import React, { Fragment, StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import { App } from './App';
 import { BaseProvider } from './providers/BaseProvider';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { IndexPage } from './pages/IndexPage';
@@ -10,8 +10,9 @@ const Main = () => {
   return (
     <Fragment>
       <Routes>
-        <Route element={<App />}>
+        <Route path='/' element={<App />}>
           <Route index element={<IndexPage />} />
+          <Route path='home' element={<IndexPage />} />
           <Route path='*' element={(
             <NotFoundPage />
           )} />
@@ -21,13 +22,15 @@ const Main = () => {
   );
 };
 
-ReactDOM.render(
-  <React.StrictMode>
+const rootElement = document.getElementById('root');
+const root = createRoot(rootElement as Element);
+
+root.render(
+  <StrictMode>
     <BrowserRouter>
       <BaseProvider>
         <Main />
       </BaseProvider>
     </BrowserRouter>
-  </React.StrictMode>,
-  document.getElementById('root')
+  </StrictMode>
 );

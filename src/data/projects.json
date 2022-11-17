@@ -1,6 +1,7 @@
 [{
   "slug": "moderation-demo",
-  "label": "Moderation Demo site",
+  "label": "Moderation demo",
+  "shortDescription": "Content moderation test app",
   "description": "A web app for clients to test the moderation platform. Allows upload text, images, and videos to the moderation platform. Groundup designed and developed the UI/UX and backend functionalities",
   "platform": "Web",
   "tech": "React, Socket.io, Nest.js, Node.js, Docker",
@@ -19,6 +20,7 @@
 }, {
   "slug": "moderation",
   "label": "Moderation platform",
+  "shortDescription": "Content moderation system",
   "description": "A web app for content moderation. Converted designs from Figma to a React codebase. Spearheaded the base UI development and largely contributed in fixing memory leaks, websocket implementation, UI/UX revisions and deployment",
   "platform": "Web",
   "tech": "React, Socket.io, Node.js, Docker",
@@ -30,6 +32,7 @@
 }, {
   "slug": "accounts-platform",
   "label": "Account management platform",
+  "shortDescription": "account and auth system",
   "description": "A core system used for authentication and authorization of users to different services and platforms. Created the initial design, functionalities and back-end connection of the accounts management suite.",
   "platform": "Web",
   "tech": "React",
@@ -41,6 +44,7 @@
 }, {
   "slug": "nms-apps",
   "label": "NMS Apps",
+  "shortDescription": "inter-connected internal systems",
   "description": "A collection of interconnected applications and services. Provides User management, Platform Authentication/Authorization, Talent management, Human Resource, Financial tools and business platforms.",
   "platform": "Web, Mobile",
   "tech": "React, Node.js, Laravel, Redis, SQL",
@@ -52,6 +56,7 @@
 }, {
   "slug": "finance-dashboard",
   "label": "Finance Dashboard",
+  "shortDescription": "forex and reports generation",
   "description": "Pieced together packages to create a dynamic dashboard with widgets like Analog/Digital global clock, Real-time foreign exchange, ForEx tools, Financial graphs and other tools to aid finance teams.",
   "platform": "Web",
   "tech": "React, Node.js, MongoDB",
@@ -68,6 +73,7 @@
 }, {
   "slug": "forex-scraper",
   "label": "Foreign Exchange PDF Scraper",
+  "shortDescription": "money exchange datasets",
   "description": "A Node.js app that scrapes, calculates and stores Foreign Exchange data from PDF's to generate 'real-time' and historical rates accessible by API",
   "platform": "Web",
   "tech": "Node.js, MongoDB",
@@ -79,6 +85,7 @@
 }, {
   "slug": "geo-code",
   "label": "API system",
+  "shortDescription": "useful datasets",
   "description": "An API system for data and api key generation. Currently includes data for Countries, States, Cities and Barangies (for the Philippines) accessible by API. Philippines geological data from the Philippines Statistics Authority. https://psa.gov.ph/classification/psgc/",
   "platform": "Web",
   "tech": "Nest.js, PostgreSQL",
@@ -96,7 +103,8 @@
   ]
 }, {
   "slug": "mobile-chat-app",
-  "label": "Mobile Chat Application",
+  "label": "SMSCams",
+  "shortDescription": "dating site mobile chat app",
   "description": "Re-worked a mobile chat app made from Cordova to React Native. Basically improved everything from supporting touch gestures, implementing in-app camera features and improving overall performance and user experience.",
   "platform": "iOS, Android",
   "tech": "React Native, Realm DB, Socket.io",
@@ -112,6 +120,7 @@
 }, {
   "slug": "dodgy-skies",
   "label": "Dodgy Skies",
+  "shortDescription": "dodge the sky missiles",
   "description": "Be one of seven different characters able to dodge missiles while collecting stars, each in their own unique way. Level them up until they evolve for cooler looks and even more stars. Beat your own high score or challenge your friends and top the leaderboards now!",
   "platform": "iOS, Android",
   "tech": "Unity3D, C#",
@@ -131,6 +140,7 @@
 }, {
   "slug": "what-bread",
   "label": "What Bread!",
+  "shortDescription": "Apay Tinapay (ilocano)",
   "description": "Join Tina Pie on her baking adventure through Silly Con Valley! Travel through shiny business parks and meet insanely accurate archetypes, while taking orders for and packing up your delectable pastries. But watch out: get the orders out as soon as possible or watch your dreams come crashing down!",
   "platform": "iOS, Android",
   "tech": "Unity3D, C#",
@@ -147,13 +157,14 @@
 }, {
   "slug": "yurei-ninja",
   "label": "Yurei Ninja",
+  "shortDescription": "You're a Ninja!",
   "description": "You: A ninja, back from the dead, seeking revenge against…The Enemy: A samurai warlord with the blackest of hearts who turned against you! Trained in the art of hiding and surprise attacks, avoid traps, strike down enemies and destroy deadly bosses, all trying to stop your quest.",
   "platform": "iOS, Android",
   "tech": "Unity3D, C#",
   "responsibility": "User Interface, Ads, Monetization, App presence API, App Management",
   "group": "Animal Cracker Games",
   "date": "2015",
-  "link": "",
+  "link": "https://play.google.com/store/apps/details?id=com.bulkypix.ninjaproject&hl=en&gl=US",
   "gallery": [
     "https://static.wixstatic.com/media/70d878_19e7718721ce43179d38002f018de4f1~mv2.jpg/v1/fill/w_450,h_800,al_c,q_80/70d878_19e7718721ce43179d38002f018de4f1~mv2.webp",
     "https://static.wixstatic.com/media/70d878_002cbbd1168a48749516dca1b4fffcae~mv2.jpg/v1/fill/w_450,h_800,al_c,q_80/70d878_002cbbd1168a48749516dca1b4fffcae~mv2.webp",

@@ -1,6 +1,7 @@
 [{
   "slug": "nms-mobile-app",
   "label": "Prototype Mobile application",
+  "shortDescription": "employee mobile app",
   "description": "A prototype mobile app",
   "platform": "iOS, Android",
   "tech": "React Native, MMKV",
@@ -14,6 +15,7 @@
 }, {
   "slug": "redmontool",
   "label": "Redis monitoring tool",
+  "shortDescription": "redis instance information",
   "description": "A web app for viewing the health of a Redis instance. Let's developers view current memory consumption, actions, logs and other information about a redis database.",
   "platform": "Web",
   "tech": "React, Node.js, Redis",
