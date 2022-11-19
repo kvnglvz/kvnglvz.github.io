@@ -84,7 +84,7 @@ export const ProfileBox = () => {
         <Grid.Col xs={12} sm={8}>
           <Title order={6}>Hi, my name is </Title>
           <Title order={4}>Kevin Galvez </Title>
-          <Text variant="text">
+          <Text>
             a developer from Baguio City. I work on web applications. I&apos;m
             interested in mobile apps, project management, and teaching.
           </Text>
