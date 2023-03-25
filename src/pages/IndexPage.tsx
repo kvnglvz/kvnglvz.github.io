@@ -3,9 +3,9 @@ import { ProfileBox } from '../components/ProfileBox';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import projectsJson from '../data/projects.json';
 import experimentsJson from '../data/experiments.json';
-import { Project } from '../interfaces/project.interface';
 import { Stack } from '@mantine/core';
 import { ProjectView } from '../components/ProjectView';
+import { Project } from '../types';
 
 const projects: Project[] = projectsJson.map((project) => project as any);
 const experiments: Project[] = experimentsJson.map(
@@ -28,6 +28,7 @@ export const IndexPage = () => {
   useEffect(() => {
     if (projectCode) {
       const project = projects.find((project) => project.slug === projectCode);
+      console.log('projectCode', projectCode, 'project', project);
       setProject(project);
     } else if (experimentCode) {
       const experiment = experiments.find(

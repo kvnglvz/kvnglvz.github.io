@@ -1,16 +1,13 @@
 [{
   "primary": "I mostly use",
-  "secondary": "React, Node.js., Docker"
+  "secondary": "React, Node.js., Nest.js, Docker"
 }, {
   "primary": "I am still improving on",
-  "secondary": "MongoDB, PostgreSQL, Redis, TypeScript, Nest.js, React Native"
+  "secondary": "MongoDB, SQL databases, Redis, TypeScript, React Native, RabbitMQ, Apollo GraphQL, HTML5, CSS3"
 }, {
-  "primary": "I had experience using",
-  "secondary": "Laravel, RabbitMQ, Unity3D, C#, Vue"
+  "primary": "I am planning to learn",
+  "secondary": "AWS, Golang"
 }, {
-  "primary": "I have retained",
-  "secondary": "OOP concepts, optimization techniques, memory management."
-}, {
-  "primary": "I want to learn",
-  "secondary": "Flutter/Dart, GraphQL"
+  "primary": "I am continously improving on",
+  "secondary": "OOP concepts, optimization techniques, memory management, delivering high performance apps"
 }]

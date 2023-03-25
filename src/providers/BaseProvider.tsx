@@ -1,20 +1,17 @@
-import React from 'react';
-import { AppStoreSubscriber } from '../stores/appStore';
+import React, { useContext } from 'react';
 import { darkTheme, lightTheme } from '../config/themes';
-import { MantineProvider, Button } from '@mantine/core';
+import { MantineProvider } from '@mantine/core';
+import { AppContext } from '../App';
 
 export const BaseProvider = ({ children }: any) => {
+  const { colorScheme } = useContext(AppContext);
   return (
-    <AppStoreSubscriber>
-      {({ theme }) => (
-        <MantineProvider
-          withGlobalStyles
-          withNormalizeCSS
-          theme={theme === 'dark' ? darkTheme : lightTheme}
-        >
-          { children }
-        </MantineProvider>
-      )}
-    </AppStoreSubscriber>
+    <MantineProvider
+      withGlobalStyles
+      withNormalizeCSS
+      theme={colorScheme === 'dark' ? darkTheme : lightTheme}
+    >
+      {children}
+    </MantineProvider>
   );
 };

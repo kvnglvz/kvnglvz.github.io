@@ -10,15 +10,13 @@ const Main = () => {
   return (
     <Fragment>
       <Routes>
-        <Route path='/' element={<App />}>
+        <Route path="/" element={<App />}>
           <Route index element={<IndexPage />} />
-          <Route path='home' element={<IndexPage />} />
-          <Route path='*' element={(
-            <NotFoundPage />
-          )} />
+          <Route path="home" element={<IndexPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
-    </Fragment>    
+    </Fragment>
   );
 };
 
@@ -32,5 +30,5 @@ root.render(
         <Main />
       </BaseProvider>
     </BrowserRouter>
-  </StrictMode>
+  </StrictMode>,
 );

@@ -1,42 +1,19 @@
 import { Carousel } from '@mantine/carousel';
-import {
-  AspectRatio,
-  Divider,
-  Grid,
-  Image,
-  Modal,
-  Stack,
-  Text,
-  Title,
-} from '@mantine/core';
-import { useMediaQuery, useViewportSize } from '@mantine/hooks';
-import React, { Fragment, useEffect, useMemo, useState } from 'react';
-import { Navigate } from 'react-router-dom';
-import { Project } from '../interfaces/project.interface';
+import { Divider, Grid, Image, Modal, Text, Title } from '@mantine/core';
+import { useViewportSize } from '@mantine/hooks';
+import { useContext, useMemo } from 'react';
+import { AppContext } from '../App';
+import { Project } from '../types';
 
-interface ProjectViewInterface {
-  project: Project | undefined;
+type ProjectViewInterface = {
+  project: Project;
   onClose: () => void;
-}
+};
 
 export const ProjectView = (props: ProjectViewInterface) => {
   const { height } = useViewportSize();
   const { project, onClose } = props;
-  const [activeStep, setActiveStep] = useState<number>(0);
-  const isMobile = useMediaQuery('(max-width: 768px)');
-
-  const handleNext = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
-  };
-
-  const handleBack = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1);
-  };
-
-  const handleStepChange = (step: number) => {
-    setActiveStep(step);
-  };
-
+  const isMobile = useContext(AppContext);
   const hasGallery = useMemo<boolean>(() => {
     if (project) {
       return project.gallery?.length > 0;
@@ -62,7 +39,6 @@ export const ProjectView = (props: ProjectViewInterface) => {
     <Modal
       size={'md'}
       fullScreen
-      transitionDuration={200}
       opened={Boolean(project)}
       onClose={onClose}
       title={project?.label}

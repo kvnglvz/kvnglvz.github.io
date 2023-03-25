@@ -1,7 +1,7 @@
-import { Box, Title, Divider, Stack } from '@mantine/core';
-import React, { Fragment } from 'react';
+import React from 'react';
+import { Title, Divider, Stack } from '@mantine/core';
 
-export const BoxHeader = ({ label }: { label: string}) => {
+export const BoxHeader = ({ label }: { label: string }) => {
   return (
     <Stack>
       <Divider />

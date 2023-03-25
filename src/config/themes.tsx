@@ -18,7 +18,7 @@ export const darkTheme: Mantine.MantineThemeOverride = {
   colorScheme: 'dark',
   primaryColor: 'yellow',
   fontFamily: '"Georgia", serif',
-  fontSizes: { xs: 16 },
+  fontSizes: { xs: '1.2rem' },
   headings: {
     fontWeight: 'bold',
     fontFamily: '"Inter", "Arial", sans-serif',
@@ -43,7 +43,7 @@ export const lightTheme: Mantine.MantineThemeOverride = {
   colorScheme: 'light',
   primaryColor: 'blue',
   fontFamily: '"Georgia", serif',
-  fontSizes: { xs: 16 },
+  fontSizes: { xs: '1.2rem' },
   headings: {
     fontWeight: 'bold',
     fontFamily: '"Inter", "Arial", sans-serif',
