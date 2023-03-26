@@ -6,7 +6,7 @@ import { AppContext } from '../App';
 import { Project } from '../types';
 
 type ProjectViewInterface = {
-  project: Project;
+  project: Project | undefined;
   onClose: () => void;
 };
 

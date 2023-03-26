@@ -19,7 +19,7 @@ export const IndexPage = () => {
   const projectCode = searchParams.get('project');
   const experimentCode = searchParams.get('experiment');
 
-  const [project, setProject] = useState<Project | undefined>(undefined);
+  const [project, setProject] = useState<Project>();
 
   const handleClearProject = () => {
     navigate('/');
