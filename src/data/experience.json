@@ -23,9 +23,9 @@
   "duration": "2018-02 - 2022-05",
   "projects": [{
     "slug": "moderation-demo",
-    "label": "Moderation demo",
-    "shortDescription": "Content moderation test app",
-    "description": "A web app for clients to test the moderation platform. Allows upload text, images, and videos to the moderation platform. Groundup designed and developed the UI/UX and backend functionalities",
+    "label": "Content Moderation",
+    "shortDescription": "ui/ux, real-time content assignment, and demo web app",
+    "description": "Converted designs from Figma to a React codebase. Spearheaded the base UI development and largely contributed in fixing memory leaks, websocket implementation, UI/UX revisions and deployment. Created web app for clients to test the moderation platform. Allows upload text, images, and videos to the moderation platform. Groundup designed and developed the UI/UX and backend functionalities",
     "platform": "Web",
     "tech": "React, Socket.io, Nest.js, Node.js, Docker",
     "responsibility": "Frontend, Backend",
@@ -40,18 +40,6 @@
       "/images/demo-moderation/5.jpeg",
       "/images/demo-moderation/6.jpeg"
     ]
-  }, {
-    "slug": "moderation",
-    "label": "Moderation platform",
-    "shortDescription": "Content moderation system",
-    "description": "A web app for content moderation. Converted designs from Figma to a React codebase. Spearheaded the base UI development and largely contributed in fixing memory leaks, websocket implementation, UI/UX revisions and deployment",
-    "platform": "Web",
-    "tech": "React, Socket.io, Node.js, Docker",
-    "responsibility": "Frontend, Backend",
-    "group": "NMS PH PTY LTD",
-    "date": "2021",
-    "link": "",
-    "gallery": []
   }, {
     "slug": "accounts-platform",
     "label": "Account management platform",
@@ -95,7 +83,7 @@
     ]
   }, {
     "slug": "forex-scraper",
-    "label": "Foreign Exchange PDF Scraper",
+    "label": "Foreign Exchange scraper",
     "shortDescription": "money exchange datasets",
     "description": "A Node.js app that scrapes, calculates and stores Foreign Exchange data from PDF's to generate 'real-time' and historical rates accessible by API",
     "platform": "Web",
@@ -107,8 +95,8 @@
     "gallery": []
   }, {
     "slug": "geo-code",
-    "label": "API system",
-    "shortDescription": "useful datasets",
+    "label": "Useful data API",
+    "shortDescription": "useful data like geological data",
     "description": "An API system for data and api key generation. Currently includes data for Countries, States, Cities and Barangies (for the Philippines) accessible by API. Philippines geological data from the Philippines Statistics Authority. https://psa.gov.ph/classification/psgc/",
     "platform": "Web",
     "tech": "Nest.js, PostgreSQL",
@@ -142,7 +130,7 @@
     ]
   }]
 },{
-  "position": "Software engineer",
+  "position": "Mobile game engineer",
   "company": "Animal Cracker Games",
   "work": "API integration, Monetization, Ad Integration, Game systems, User interface, Binary management & deployment",
   "duration": "2014-06 - 2018-01",
@@ -156,7 +144,7 @@
     "responsibility": "Gameplay mechanics, User Interface, Ads, Monetization, App presence API, App Management",
     "group": "Animal Cracker Games",
     "date": "2015",
-    "link": "",
+    "link": "https://play.google.com/store/apps/details?id=com.animalcrackergames.games.dodgyskies",
     "gallery": [
       "https://play-lh.googleusercontent.com/EuciLFdhELEGEpvMNAMONC6Og9K6oaaLB4ZXBGKWzsDAdKK2QbjM522m-9_YcuqLuRQ=w1920-h937-rw",
       "https://play-lh.googleusercontent.com/jjMUIK7clKBHkcRYzbRU9FMQp6LEwDCIc7-MqcAMkmezzYKKshvkTW8ZNHs-wIBkKSc=w1920-h937-rw",
@@ -176,7 +164,7 @@
     "responsibility": "User Interface, Ads, Monetization, App presence API, App Management",
     "group": "Animal Cracker Games",
     "date": "2015",
-    "link": "",
+    "link": "https://play.google.com/store/apps/details?id=com.fishcrackergames.WhatBread",
     "gallery": [
       "https://static.wixstatic.com/media/70d878_d72988f0185447ff96890e809324631a~mv2.png/v1/fill/w_450,h_802,al_c,q_90,usm_0.66_1.00_0.01/70d878_d72988f0185447ff96890e809324631a~mv2.webp",
       "https://static.wixstatic.com/media/70d878_0dfecf0acf2e4673b6300cf95b21ba66~mv2.png/v1/fill/w_450,h_802,al_c,q_90,usm_0.66_1.00_0.01/70d878_0dfecf0acf2e4673b6300cf95b21ba66~mv2.webp",

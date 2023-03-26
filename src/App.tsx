@@ -1,5 +1,4 @@
-import React, { createContext } from 'react';
-import { Outlet } from 'react-router';
+import React, { createContext, PropsWithChildren } from 'react';
 import { Container } from '@mantine/core';
 import { useColorScheme, useMediaQuery } from '@mantine/hooks';
 
@@ -13,14 +12,14 @@ export const AppContext = createContext<AppContextProps>({
   colorScheme: 'dark',
 });
 
-export const App = () => {
+export const App = ({ children }: PropsWithChildren) => {
   const isMobile = useMediaQuery('(max-width: 768px)');
   const colorScheme = useColorScheme();
 
   return (
     <AppContext.Provider value={{ isMobile, colorScheme }}>
       <Container size="xs" p="xl" py={'60px'}>
-        <Outlet />
+        {children}
       </Container>
     </AppContext.Provider>
   );

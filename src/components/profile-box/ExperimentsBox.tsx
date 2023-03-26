@@ -2,9 +2,8 @@ import { Project } from '../../types';
 import { SegmentBox } from '../SegmentBox';
 import experimentsJson from '../../data/experiments.json';
 import { Anchor, Group, Text } from '@mantine/core';
-import { useContext } from 'react';
+import { Fragment, useContext } from 'react';
 import { AppContext } from '../../App';
-import { useSearchParams } from 'react-router-dom';
 
 const experiments: Project[] = experimentsJson.map(
   (project) => project as Project,
@@ -12,18 +11,17 @@ const experiments: Project[] = experimentsJson.map(
 
 export const ExperimentsBox = () => {
   const { isMobile } = useContext(AppContext);
-  const [, setSearchParams] = useSearchParams();
 
   if (experiments.length === 0) return null;
   return (
     <SegmentBox label="Experiments">
-      {experiments.map((project, projectIdx) => {
+      {experiments.map((project) => {
         return (
-          <Group spacing="xs" key={`project-${projectIdx}`}>
+          <Text key={`project-${project.slug}`}>
             {project.link ? (
               <Anchor
                 component="a"
-                href={project.link}
+                href={project?.link}
                 rel="noreferrer"
                 target="_blank"
               >
@@ -31,20 +29,16 @@ export const ExperimentsBox = () => {
               </Anchor>
             ) : (
               <Anchor
-                component="button"
-                onClick={() =>
-                  setSearchParams({
-                    project: project.slug,
-                  })
-                }
+                component="a"
+                underline={false}
+                color="dimmed"
+                sx={{ cursor: 'default' }}
               >
                 {project.label}
               </Anchor>
             )}
-            {!isMobile ? (
-              <Text transform="lowercase">{project?.shortDescription}</Text>
-            ) : null}
-          </Group>
+            {isMobile ? null : ` | ${project?.shortDescription}`}
+          </Text>
         );
       })}
     </SegmentBox>

@@ -1,6 +1,6 @@
 [{
-  "label": "Music",
-  "description": "City Pop, Jazz, Funk, December Avenue, Autotelic, Mariya Takeuchi, EPO, Barbie Almalbis and anything under the sun",
+  "label": "Spotify",
+  "description": "Music for the mind, the man, and the soul",
   "resources": "https://open.spotify.com/user/iko70tolnoilare6taa2y2nwt?si=b342f381183a4ee2",
   "resources_label": "Spotify"
 }, {
@@ -10,7 +10,7 @@
   "resources_label": null
 }, {
   "label": "Furniture & Architecture",
-  "description": "HomeMadeModern, Dekko",
+  "description": "HomeMadeModern, Dekko, Japanese houses",
   "resources": null,
   "resources_label": null
 }]
