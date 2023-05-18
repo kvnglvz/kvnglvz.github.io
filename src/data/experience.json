@@ -1,4 +1,10 @@
 [{
+  "company": "Arcanys",
+  "position": "Web developer",
+  "work": "No summary yet",
+  "duration": "2023-04 - current",
+  "projects": []
+}, {
   "company": "Valhalla Online Services",
   "position": "Fullstack dev",
   "work": "Mostly did backend using NestJS but also a little bit of React Frontend",
