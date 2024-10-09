@@ -1,0 +1,18 @@
+[
+  {
+    "primary": "My preferred stack is",
+    "secondary": "React, Nest.js, TypeScript"
+  },
+  {
+    "primary": "I'm currently using these",
+    "secondary": "AWS, Serverless, Vue"
+  },
+  {
+    "primary": "I have worked on projects using",
+    "secondary": "Redis, React Native, RabbitMQ, GraphQL, Docker, NoSQL, SQL"
+  },
+  {
+    "primary": "I am continously improving on",
+    "secondary": "optimization techniques, microservices, project architecture, high performance apps"
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "label": "'GSuite basics'",
+    "description": "Very Basic Tech Talks presents GSuite!",
+    "resources": "https://youtu.be/bmvtVImCY0c?t=4906",
+    "resources_label": "Video",
+    "date": "June 2020"
+  },
+  {
+    "label": "'How to make money with AdMob'",
+    "description": "Ads ads ads",
+    "resources": "https://drive.google.com/file/d/0B25GFft73_5bdUo4Z0FjVkpPOVk/view?usp=sharing&resourcekey=0-yIJH2I_amHs-sNnxWE1p9A",
+    "resources_label": "Presentation",
+    "date": "Mar 2017"
+  },
+  {
+    "label": "Game development workshop",
+    "description": "Ren'Py & Unity 3D",
+    "resources": "https://www.facebook.com/rcanu/posts/pfbid02LXQMKXHt1HMr6nUP5AFd4LfCGXjeDzwprQ8xZCqNYW75iHeJ37MuJzNpC3xtwyBNl",
+    "resources_label": "Post",
+    "date": "Oct 2015"
+  }
+]

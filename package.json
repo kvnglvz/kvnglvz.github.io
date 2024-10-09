@@ -1,0 +1,52 @@
+{
+  "name": "kevin-react-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@mantine/hooks": "^7.12.2",
+    "@radix-ui/react-separator": "^1.1.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.5.4",
+    "lucide-react": "^0.441.0",
+    "normalize.css": "^8.0.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2",
+    "tailwind-merge": "^2.5.2",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "scripts": {
+    "start": "vite --port=10001",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run build"
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.12",
+    "@types/react": "^18.3.7",
+    "@types/react-dom": "^18.3.0",
+    "@typescript-eslint/eslint-plugin": "^7.17.0",
+    "@typescript-eslint/parser": "^7.17.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "apisauce": "^3.0.0",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.35.0",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "gh-pages": "^6.1.1",
+    "husky": "^9.1.6",
+    "postcss": "^8.4.47",
+    "prettier": "^3.3.3",
+    "tailwindcss": "^3.4.12",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.6"
+  }
+}

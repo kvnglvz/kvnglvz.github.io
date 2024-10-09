@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Caladea
+- Font Author: Copyright 2012 The Caladea Project Authors (https://github.com/huertatipografica/Caladea)
+- Font Source: https://fonts.gstatic.com/s/caladea/v7/kJE2BugZ7AAjhybUtaNY39oYqO52FZ0.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))

@@ -1,0 +1,26 @@
+[
+  {
+    "company": "Arcanys",
+    "position": "Web dev",
+    "work": "Currently working on different client projects and worked with exciting technologies in AWS",
+    "duration": "2023-04 - current"
+  },
+  {
+    "company": "Valhalla Online Services",
+    "position": "Web dev",
+    "work": "Worked on an e-learning platform for startups in Asia (NewCampus)",
+    "duration": "2022-05 - 2023-01"
+  },
+  {
+    "company": "New Media Services PTY. Ltd.",
+    "position": "Web and mobile dev",
+    "work": "Did frontend, backend, mobile dev't on 7 different projects. Also did mentoring in React and a lot of research & development, and experimentation",
+    "duration": "2018-02 - 2022-05"
+  },
+  {
+    "company": "Animal Cracker Games",
+    "position": "Mobile game dev",
+    "work": "I've worked on API integrations, monetization strategies, ad integration, game systems, user interfaces, and binary management & deployment.",
+    "duration": "2014-06 - 2018-01"
+  }
+]
