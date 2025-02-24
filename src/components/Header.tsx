@@ -26,6 +26,22 @@ export const Header = () => {
         >
           resume
         </NavLink>
+        <NavLink
+          to="/projects"
+          className={({ isActive, isPending }) => {
+            return isActive ? 'active' : isPending ? 'pending' : '';
+          }}
+        >
+          projects
+        </NavLink>
+        <NavLink
+          to="/writing"
+          className={({ isActive, isPending }) => {
+            return isActive ? 'active' : isPending ? 'pending' : '';
+          }}
+        >
+          writing
+        </NavLink>
       </nav>
     </header>
   );

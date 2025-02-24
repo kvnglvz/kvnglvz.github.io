@@ -4,13 +4,13 @@ import { useContext } from 'react';
 import { AppContext } from '../App';
 import AnimatedLayout from '@/components/AnimatedLayout';
 
-export const ResumePage = () => {
+export const BlogPage = () => {
   const { colorScheme } = useContext(AppContext);
 
   return (
     <AnimatedLayout>
       <section>
-        <p>Resumé.</p>
+        <p>Coming soon.</p>
       </section>
     </AnimatedLayout>
   );
