@@ -77,7 +77,7 @@ export const IndexPage = () => {
       <SpeakingBox /> */}
       <div>
         <img
-          className={colorScheme === 'light' ? 'ImageGray' : ''}
+          className={colorScheme === 'light' ? 'ImageGray' : 'ImageGray'}
           alt="kevin's picture"
           src="/images/profpic.jpg"
           width={'100%'}
