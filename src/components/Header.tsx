@@ -11,7 +11,7 @@ export const Header = () => {
   return (
     <header>
       <div className="title">
-        <Link to="/" className="name">
+        <Link to="/" className="name code-regular">
           Kevin Galvez
         </Link>
         {path ? <span className="dash"> — </span> : null}

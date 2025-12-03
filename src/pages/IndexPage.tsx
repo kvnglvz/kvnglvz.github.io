@@ -52,7 +52,7 @@ export const IndexPage = () => {
             rel="noreferrer"
             href="https://nms.ph/"
           >
-            New Media Service Philippines
+            NMS Philippines
           </a>
           , and Animal Cracker Games.
         </p>

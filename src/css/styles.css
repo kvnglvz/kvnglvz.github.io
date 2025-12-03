@@ -1,6 +1,39 @@
 body {
-  font-family: 'Helvetica Neue', Helvetica, sans-serif;
-  color: #3a3a3a;
+  font-family: 'Bona Nova', sans-serif;
+  background-color: #f9f9f9;
+  color: #4b4b4b;
+}
+
+.code-regular {
+  font-family: 'Google Sans Code', monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.code-bold {
+  font-family: 'Google Sans Code', monospace;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.serif-regular {
+  font-family: 'Bona Nova', serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.serif-regular-italic {
+  font-family: 'Bona Nova', serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.serif-bold {
+  font-family: 'Bona Nova', serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 .wrapper {
@@ -22,9 +55,10 @@ header {
   padding-top: 2rem;
 }
 header a.name {
-  color: black;
+  color: #404040;
   text-decoration: none;
-  font-weight: 900;
+  text-transform: lowercase;
+  /*font-weight: 900;*/
   font-size: 1.6rem;
 }
 header span.location {
@@ -101,15 +135,26 @@ footer {
 }
 
 section > span.header {
-  font-weight: 500;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+section {
+  font-weight: 400;
+  font-size: 1.15rem;
 }
 
 p.description {
   /* font-weight: 500; */
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
+}
+
+footer {
+  font-weight: 400;
+  font-size: 1.15rem;
 }
 
 footer > div.social-link {
@@ -130,7 +175,7 @@ footer > div.social-link {
   }
   .ellipsis::before {
     color: lightgray;
-    content: '.....................................................................................................................';
+    content: '....................................................................................................................................................................................................................................................';
     position: absolute;
     left: 0;
     right: 0;
