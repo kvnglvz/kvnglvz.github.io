@@ -14,7 +14,7 @@ const AnimatedLayout = ({ children }: PropsWithChildren): React.JSX.Element => {
       animate="enter"
       exit="exit"
       variants={variants}
-      transition={{ duration: 0.5, type: 'easeInOut' }}
+      transition={{ duration: 0.5, type: 'spring', ease: 'easeInOut' }}
       className="relative"
     >
       {children}

@@ -2,6 +2,7 @@ body {
   font-family: 'Bona Nova', sans-serif;
   background-color: #f9f9f9;
   color: #4b4b4b;
+  /*-webkit-font-smoothing: none;*/
 }
 
 .code-regular {
@@ -58,8 +59,8 @@ header a.name {
   color: #404040;
   text-decoration: none;
   text-transform: lowercase;
-  /*font-weight: 900;*/
-  font-size: 1.6rem;
+  font-weight: 500;
+  font-size: 1.8rem;
 }
 header span.location {
   color: black;
