@@ -61,12 +61,12 @@ export const IndexPage = () => {
           and share ideas, and to meaningfully express what brings them joy.
         </p>
         {/* I hope to develop performant applications that */}
-        <p>Goal</p>
+        <span className="header">Goal</span>
         {/* Towards that goal, I am a generalist and care deeply about systems,
         which form the fundamental building blocks of our applications; and
         interaction design, how we use and live with computers that are all
         around us. */}
-        <p>I also volunteer as a tech director at a local church.</p>
+        <p>I am also the creative director at a local church.</p>
         <p>Other interests: Minimalism, Woodworking, Furniture, Architecture</p>
       </section>
 

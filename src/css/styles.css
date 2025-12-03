@@ -2,7 +2,7 @@ body {
   font-family: 'Bona Nova', sans-serif;
   background-color: #f9f9f9;
   color: #4b4b4b;
-  /*-webkit-font-smoothing: none;*/
+  -webkit-font-smoothing: none;
 }
 
 .code-regular {
@@ -75,14 +75,19 @@ header span.dash {
 
 @media (max-width: 600px) {
   header {
-    display: flex;
-    flex-direction: column;
+    align-items: flex-start;
   }
-  header > div.title {
-    width: 100%;
-    background-color: pink;
+  header > div.title > span {
+    display: none;
   }
   nav {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5rem;
+  }
+  nav > a {
+    margin-bottom: 0.4rem;
+    font-size: 1.4rem;
   }
 }
 
