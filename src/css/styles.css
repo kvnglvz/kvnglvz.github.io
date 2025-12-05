@@ -88,6 +88,8 @@ header span.dash {
   nav > a {
     margin-bottom: 0.4rem;
     font-size: 1.4rem;
+    text-align: right;
+    margin-right: 0rem !important;
   }
 }
 
