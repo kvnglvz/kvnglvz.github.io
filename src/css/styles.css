@@ -77,7 +77,10 @@ header span.dash {
   header {
     align-items: flex-start;
   }
-  header > div.title > span {
+  header > div.title > span.location {
+    display: block;
+  }
+  header > div.title > span.dash {
     display: none;
   }
   nav {
