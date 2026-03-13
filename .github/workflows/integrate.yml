@@ -1,8 +1,7 @@
 name: Build and Deploy
 on:
   push:
-    branches:
-      dev-vite
+    branches: dev-vite
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -12,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v3 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
+        uses: actions/checkout@v6
         with:
           persist-credentials: false
 
