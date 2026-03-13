@@ -11,7 +11,7 @@
     "@typescript-eslint/parser": "^8.57.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "eslint": "^9.39.4",
+    "eslint": "9.7",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.5",
     "eslint-plugin-react": "^7.37.5",
@@ -35,7 +35,7 @@
     "@types/node": "^25.5.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^5.1.4",
+    "@vitejs/plugin-react": "^6.0.0",
     "apisauce": "^3.2.2",
     "autoprefixer": "^10.4.27",
     "baseline-browser-mapping": "^2.10.7",
@@ -45,6 +45,6 @@
     "prettier": "^3.8.1",
     "tailwindcss": "^4.2.1",
     "typescript": "^5.9.3",
-    "vite": "^7.3.1"
+    "vite": "^8.0.0"
   }
 }
